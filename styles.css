@@ -214,6 +214,18 @@ img {
   opacity: 1;
 }
 
+.water-deposit-image {
+  position: absolute;
+  top: 240.12vw;
+  left: 36.5vw;
+  z-index: 3;
+  width: 22.7vw;
+  height: 23.35vw;
+  background: #000 url("assets/deposito-agua-nuevo.png") center / cover no-repeat;
+  clip-path: polygon(22% 0, 100% 0, 100% 75%, 77% 100%, 0 100%, 0 21%);
+  pointer-events: none;
+}
+
 .step-number-svg {
   position: absolute;
   z-index: 5;
