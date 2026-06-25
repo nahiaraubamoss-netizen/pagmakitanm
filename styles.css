@@ -1,0 +1,646 @@
+:root {
+  --black: #000;
+  --makita: #1b9db7;
+  --teal-dark: #042126;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--black);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--black);
+  color: #fff;
+  font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.desktop-page {
+  position: relative;
+  width: 100%;
+  background: var(--black);
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.desktop-page::after {
+  position: absolute;
+  top: 161.6vw;
+  left: 30vw;
+  z-index: 3;
+  width: 42vw;
+  height: 6.2vw;
+  content: "";
+  background: #000;
+  pointer-events: none;
+}
+
+.desktop-nav {
+  position: absolute;
+  top: 4.38vw;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 1.8vw;
+}
+
+.desktop-nav::before {
+  position: absolute;
+  top: -0.45vw;
+  left: 45.3vw;
+  z-index: -1;
+  width: 43.6vw;
+  height: 2.35vw;
+  content: "";
+  background: #05090b;
+  border-radius: 0.45vw;
+}
+
+.desktop-nav a {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 1.28vw;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.desktop-nav a:nth-child(1) {
+  left: 46.84vw;
+}
+
+.desktop-nav a:nth-child(2) {
+  left: 52.43vw;
+}
+
+.desktop-nav a:nth-child(3) {
+  left: 64.32vw;
+}
+
+.desktop-nav a:nth-child(4) {
+  left: 72.65vw;
+}
+
+.desktop-nav a:nth-child(5) {
+  left: 83.62vw;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+  color: var(--makita);
+}
+
+.transport-mask {
+  position: absolute;
+  top: 113.55vw;
+  left: 67.95vw;
+  z-index: 2;
+  width: 24.2vw;
+  height: 5.55vw;
+  background: #000;
+  pointer-events: none;
+}
+
+.transport-hover {
+  position: absolute;
+  top: 110.3vw;
+  left: 68.6vw;
+  z-index: 4;
+  width: 18.8vw;
+  height: 2.7vw;
+  cursor: default;
+}
+
+.transport-hover span {
+  position: absolute;
+  top: 3.15vw;
+  left: 0;
+  width: 22vw;
+  color: #fff;
+  font-family: "Oxygen", Arial, sans-serif;
+  font-size: 1.23vw;
+  font-weight: 400;
+  line-height: 1.54;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.transport-hover:hover span,
+.transport-hover:focus-within span {
+  opacity: 1;
+}
+
+.deposit-mask,
+.battery-mask,
+.steel-mask {
+  position: absolute;
+  z-index: 3;
+  height: 6.6vw;
+  background: #000;
+  pointer-events: none;
+}
+
+.deposit-mask {
+  top: 113.45vw;
+  left: 10vw;
+  width: 26.2vw;
+}
+
+.battery-mask {
+  top: 142.75vw;
+  left: 10.45vw;
+  width: 19.5vw;
+}
+
+.steel-mask {
+  top: 142.65vw;
+  left: 67.85vw;
+  width: 26.5vw;
+}
+
+.feature-hover {
+  position: absolute;
+  z-index: 4;
+  height: 2.7vw;
+  cursor: default;
+}
+
+.deposit-hover {
+  top: 110.3vw;
+  left: 10.92vw;
+  width: 15.8vw;
+}
+
+.battery-hover {
+  top: 139.5vw;
+  left: 11.4vw;
+  width: 13.3vw;
+}
+
+.steel-hover {
+  top: 139.5vw;
+  left: 68.65vw;
+  width: 11.8vw;
+}
+
+.feature-hover span {
+  position: absolute;
+  top: 3.9vw;
+  left: 0;
+  width: 24vw;
+  color: #fff;
+  font-family: "Oxygen", Arial, sans-serif;
+  font-size: 1.23vw;
+  font-weight: 400;
+  line-height: 1.54;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.feature-hover:hover span,
+.feature-hover:focus-within span {
+  opacity: 1;
+}
+
+.step-number-svg {
+  position: absolute;
+  z-index: 5;
+  width: 2.4052vw;
+  height: 2.4052vw;
+  pointer-events: none;
+}
+
+.step-number-one {
+  top: 329.6544vw;
+  left: 11.044vw;
+}
+
+.step-number-two {
+  top: 329.6421vw;
+  left: 39.7222vw;
+}
+
+.step-number-three {
+  top: 329.6544vw;
+  left: 67.4032vw;
+}
+
+.step-number-svg circle {
+  fill: #6ed8ff;
+}
+
+.step-number-svg path {
+  fill: #fff;
+}
+
+.step-overlay {
+  position: absolute;
+  z-index: 4;
+  width: 23.3vw;
+  height: 23.45vw;
+}
+
+.step-overlay::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 6.95vw;
+  content: "";
+  background-image: url("assets/desktop-original.png");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  clip-path: polygon(21.6% 0, 100% 0, 100% 31.5%, 77.2% 100%, 0 100%, 0 65.7%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.step-overlay:hover::before,
+.step-overlay:focus-visible::before {
+  opacity: 1;
+}
+
+.step-overlay-one {
+  top: 310.62vw;
+  left: 7.87vw;
+}
+
+.step-overlay-one::before {
+  background-position: -7.87vw -326.88vw;
+}
+
+.step-overlay-two {
+  top: 310.62vw;
+  left: 36.52vw;
+}
+
+.step-overlay-two::before {
+  background-position: -36.52vw -326.88vw;
+}
+
+.step-overlay-three {
+  top: 310.52vw;
+  left: 64.24vw;
+}
+
+.step-overlay-three::before {
+  background-position: -64.24vw -326.78vw;
+}
+
+.color-swap {
+  position: absolute;
+  top: 427vw;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 47vw;
+  background: transparent;
+  pointer-events: none;
+  transition: background 180ms ease;
+}
+
+.color-swap::before,
+.color-swap::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.color-dots-cover {
+  position: absolute;
+  top: 40.55vw;
+  left: 42.3vw;
+  z-index: 4;
+  width: 11.3vw;
+  height: 3.2vw;
+  content: "";
+  background: #000;
+  pointer-events: none;
+}
+
+.color-swap::before {
+  top: 0;
+  left: 30.5vw;
+  width: 30.8vw;
+  height: 39.5vw;
+}
+
+.color-swap.is-blue-active::before,
+.color-swap.is-green-active::before,
+.color-swap.is-blue-active::after,
+.color-swap.is-green-active::after {
+  opacity: 1;
+}
+
+.color-swap.is-blue-active::after {
+  top: 7vw;
+  left: 7.5vw;
+  width: 25vw;
+  height: 29vw;
+}
+
+.color-swap.is-green-active::after {
+  top: 7vw;
+  left: 58vw;
+  width: 31vw;
+  height: 30vw;
+}
+
+.color-product {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  transform-origin: center center;
+  will-change: opacity;
+  transition: opacity 240ms ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.color-swap.is-resetting::before,
+.color-swap.is-resetting::after,
+.color-swap.is-resetting .color-product {
+  transition: none;
+}
+
+.color-swap.is-blue-active .color-product,
+.color-swap.is-green-active .color-product {
+  opacity: 1;
+}
+
+.color-swap.is-blue-active .color-product-green,
+.color-swap.is-green-active .color-product-blue {
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
+}
+
+.color-product-blue {
+  top: 9.22vw;
+  left: 11.03vw;
+  width: 16.78vw;
+  height: 23.16vw;
+  z-index: 2;
+}
+
+.color-product-red {
+  top: 3.54vw;
+  left: 35.17vw;
+  width: 23.13vw;
+  height: 31.15vw;
+  z-index: 3;
+}
+
+.color-product-green {
+  top: 10.21vw;
+  left: 62.16vw;
+  width: 22.23vw;
+  height: 22.23vw;
+  z-index: 2;
+}
+
+.color-swap.is-blue-active .color-product-blue {
+  top: 3.54vw;
+  left: 35.17vw;
+  width: 23.13vw;
+  height: 31.15vw;
+  z-index: 3;
+}
+
+.color-swap.is-blue-active .color-product-red {
+  top: 9.22vw;
+  left: 11.03vw;
+  width: 16.78vw;
+  height: 23.16vw;
+  z-index: 2;
+}
+
+.color-swap.is-green-active .color-product-red {
+  top: 10.21vw;
+  left: 62.16vw;
+  width: 22.23vw;
+  height: 22.23vw;
+  z-index: 2;
+}
+
+.color-swap.is-green-active .color-product-green {
+  top: 3.54vw;
+  left: 35.17vw;
+  width: 23.13vw;
+  height: 31.15vw;
+  z-index: 3;
+}
+
+.color-dot {
+  position: absolute;
+  z-index: 6;
+  top: 40.82vw;
+  width: 2.46vw;
+  height: 2.46vw;
+  padding: 0;
+  border: 0.11vw solid #fff;
+  border-radius: 50%;
+  transform: translateY(0);
+  transition: border-width 160ms ease, transform 180ms ease, box-shadow 180ms ease;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.color-dot:hover,
+.color-dot:focus-visible {
+  transform: translateY(-0.28vw);
+  border: 0.22vw solid #fff;
+}
+
+.color-dot.is-active {
+  transform: translateY(-0.42vw);
+  border: 0.22vw solid #fff;
+  box-shadow: 0 0.28vw 0.7vw rgba(110, 216, 255, 0.26);
+}
+
+.color-dot-blue {
+  left: 42.68vw;
+  background: #00728a;
+}
+
+.color-dot-red {
+  left: 46.59vw;
+  background: #804243;
+}
+
+.color-dot-green {
+  left: 50.69vw;
+  background: #716d4f;
+}
+
+.footer-social-filled {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+.social-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 512.0vw;
+  width: 2.08vw;
+  height: 2.08vw;
+  border-radius: 50%;
+  background: #6ed8ff;
+}
+
+.social-instagram {
+  left: 72.61vw;
+}
+
+.social-facebook {
+  left: 74.88vw;
+}
+
+.social-tiktok {
+  left: 77.14vw;
+}
+
+.social-icon svg {
+  width: 1.32vw;
+  height: 1.32vw;
+  fill: #fff;
+}
+
+.desktop-page img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -1.6vw;
+}
+
+.mobile-page {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .desktop-page {
+    display: none;
+  }
+
+  .mobile-page {
+    display: block;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .mobile-slice {
+    position: relative;
+    width: 100%;
+    background-image: url("assets/desktop-design.png");
+    background-repeat: no-repeat;
+    background-size: 1220px auto;
+    background-color: var(--black);
+  }
+
+  .topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 58px;
+    padding: 0 24px;
+    background: rgba(0, 0, 0, 0.58);
+  }
+
+  .topbar strong {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1;
+    text-shadow: -1px 0 #e60110, 0 1px #e60110, 1px 0 #e60110, 0 -1px #e60110;
+  }
+
+  .topbar button {
+    display: grid;
+    gap: 4px;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+  }
+
+  .topbar span {
+    display: block;
+    height: 2px;
+    border-radius: 99px;
+    background: #fff;
+  }
+
+  .hero {
+    height: 610px;
+    background-position: 44% 0;
+  }
+
+  .terrain {
+    height: 655px;
+    background-position: 51% -1225px;
+  }
+
+  .detail-one {
+    height: 560px;
+    background-position: 20% -3560px;
+  }
+
+  .detail-two {
+    height: 525px;
+    background-position: 75% -4680px;
+  }
+
+  .steps {
+    height: 610px;
+    background-position: 50% -5580px;
+  }
+
+  .lifestyle {
+    height: 330px;
+    background-size: 900px auto;
+    background-position: 50% -3185px;
+  }
+
+  .colors {
+    height: 610px;
+    background-position: 50% -7770px;
+  }
+
+  .footer {
+    height: 360px;
+    background-size: 880px auto;
+    background-position: 50% 100%;
+    background-color: var(--teal-dark);
+  }
+}
