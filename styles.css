@@ -152,7 +152,8 @@ img {
 .deposit-mask {
   top: 108.8vw;
   left: 7.2vw;
-  width: 29.2vw;
+  width: 27.7vw;
+  height: 12.05vw;
 }
 
 .battery-mask {
@@ -177,8 +178,8 @@ img {
 .deposit-hover {
   top: 108.8vw;
   left: 7.2vw;
-  width: 29.2vw;
-  height: 12.4vw;
+  width: 27.7vw;
+  height: 12.05vw;
 }
 
 .battery-hover {
