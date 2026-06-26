@@ -47,25 +47,35 @@ img {
   pointer-events: none;
 }
 
+.header-logo {
+  position: fixed;
+  top: 3.5vw;
+  left: 7.56vw;
+  z-index: 20;
+  width: 9.2vw;
+  height: auto;
+  pointer-events: none;
+}
+
 .desktop-nav {
-  position: absolute;
+  position: fixed;
   top: 4.38vw;
   left: 0;
-  z-index: 2;
+  z-index: 20;
   width: 100%;
   height: 1.8vw;
 }
 
 .desktop-nav::before {
   position: absolute;
-  top: -0.45vw;
+  top: -0.23vw;
   left: 45.3vw;
   z-index: -1;
   width: 43.6vw;
-  height: 2.35vw;
+  height: 1.62vw;
   content: "";
   background: #05090b;
-  border-radius: 0.45vw;
+  border-radius: 0.32vw;
 }
 
 .desktop-nav a {
