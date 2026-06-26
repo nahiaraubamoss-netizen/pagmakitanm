@@ -14,12 +14,25 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-width: 320px;
   background: var(--black);
   color: #fff;
   font-family: "Space Grotesk", Arial, sans-serif;
   overflow-x: hidden;
+}
+
+body::before {
+  position: absolute;
+  top: calc(63.95vw * var(--page-scale));
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: calc(9.98vw * var(--page-scale));
+  content: "";
+  background: #0d525f;
+  pointer-events: none;
 }
 
 img {
@@ -29,6 +42,7 @@ img {
 
 .desktop-page {
   position: relative;
+  z-index: 1;
   width: 100%;
   margin-bottom: -52.8vw;
   background: var(--black);
