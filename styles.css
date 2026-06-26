@@ -25,13 +25,27 @@ body {
 
 body::before {
   position: absolute;
-  top: calc(63.95vw * var(--page-scale));
+  top: 56.82vw;
   left: 0;
   z-index: 0;
   width: 100%;
-  height: calc(9.98vw * var(--page-scale));
+  height: 8.65vw;
   content: "";
   background: #0d525f;
+  pointer-events: none;
+}
+
+body::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 5vw;
+  height: 56.82vw;
+  content: "";
+  background-image: url("assets/hero-right-texture.webp");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   pointer-events: none;
 }
 
