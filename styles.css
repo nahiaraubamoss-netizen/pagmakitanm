@@ -48,7 +48,7 @@ img {
 .original-band-icons {
   top: 53.67vw;
   height: 8.17vw;
-  background: #0d525f;
+  background-image: url("assets/icons-original-band.webp");
 }
 
 .original-band-lifestyle {
@@ -67,7 +67,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-bottom: calc((var(--page-scale) - 1) * 529.8vw);
+  margin-bottom: calc((var(--page-scale) - 1) * 529.8vw - 0.35vw);
   background: var(--black);
   overflow: hidden;
   padding-bottom: 0;
