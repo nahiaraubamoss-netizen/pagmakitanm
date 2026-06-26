@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-width: 320px;
   background: var(--black);
@@ -25,6 +26,76 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+.margin-fill {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.margin-fill-left {
+  left: 0;
+}
+
+.margin-fill-right {
+  right: 0;
+}
+
+.margin-fill-hero {
+  top: 0;
+  width: 3vw;
+  height: 59.35vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.margin-fill-hero.margin-fill-left {
+  background-image: url("assets/hero-margin-left.webp");
+}
+
+.margin-fill-hero.margin-fill-right {
+  background-image: url("assets/hero-margin-right.webp");
+}
+
+.icon-band-fill {
+  top: 59.35vw;
+  left: 0;
+  width: 100%;
+  height: 9.04vw;
+  background: #0d525f;
+}
+
+.margin-fill-lifestyle {
+  top: 332.89vw;
+  width: 3vw;
+  height: 44.89vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.margin-fill-lifestyle.margin-fill-left {
+  background-image: url("assets/lifestyle-margin-left.webp");
+}
+
+.margin-fill-lifestyle.margin-fill-right {
+  background-image: url("assets/lifestyle-margin-right.webp");
+}
+
+.margin-fill-footer {
+  top: 464.34vw;
+  width: 3vw;
+  height: 33.66vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.margin-fill-footer.margin-fill-left {
+  background-image: url("assets/footer-margin-left.webp");
+}
+
+.margin-fill-footer.margin-fill-right {
+  background-image: url("assets/footer-margin-right.webp");
 }
 
 .desktop-page {
