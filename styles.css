@@ -674,10 +674,6 @@ img {
   height: auto;
 }
 
-.desktop-page > img {
-  margin-bottom: -1.6vw;
-}
-
 .mobile-page {
   display: none;
 }
