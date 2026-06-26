@@ -47,12 +47,12 @@ img {
   pointer-events: none;
 }
 
-.header-logo {
+.fixed-header-strip {
   position: fixed;
-  top: 3.5vw;
-  left: 7.56vw;
-  z-index: 20;
-  width: 9.2vw;
+  top: 0;
+  left: 0;
+  z-index: 19;
+  width: 100%;
   height: auto;
   pointer-events: none;
 }
@@ -68,14 +68,14 @@ img {
 
 .desktop-nav::before {
   position: absolute;
-  top: -0.23vw;
+  top: -0.45vw;
   left: 45.3vw;
   z-index: -1;
   width: 43.6vw;
-  height: 1.62vw;
+  height: 2.35vw;
   content: "";
   background: #05090b;
-  border-radius: 0.32vw;
+  border-radius: 0.45vw;
 }
 
 .desktop-nav a {
