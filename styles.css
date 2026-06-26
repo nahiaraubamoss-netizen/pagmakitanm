@@ -44,8 +44,8 @@ body::after {
   height: 56.82vw;
   content: "";
   background-image: url("assets/hero-right-texture.webp");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   pointer-events: none;
 }
 
