@@ -28,39 +28,68 @@ img {
   max-width: 100%;
 }
 
-.original-band {
+.edge-fill {
   position: absolute;
-  left: 0;
-  z-index: 2;
-  width: 100%;
+  z-index: 0;
+  width: 7.5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   pointer-events: none;
 }
 
-.original-band-hero {
-  top: 0;
-  z-index: 18;
-  height: 53.67vw;
-  background-image: url("assets/hero-original-band.webp");
+.edge-fill-left {
+  left: 0;
 }
 
-.original-band-icons {
+.edge-fill-right {
+  right: 0;
+}
+
+.edge-fill-hero {
+  top: 0;
+  height: 53.67vw;
+}
+
+.edge-fill-hero.edge-fill-left {
+  background-image: url("assets/hero-edge-left.webp");
+}
+
+.edge-fill-hero.edge-fill-right {
+  background-image: url("assets/hero-edge-right.webp");
+}
+
+.edge-fill-icons {
   top: 53.67vw;
+  left: 0;
+  width: 100%;
   height: 8.17vw;
   background: #0d525f;
 }
 
-.original-band-lifestyle {
+.edge-fill-lifestyle {
   top: 301.02vw;
   height: 40.6vw;
-  background-image: url("assets/lifestyle-original-band.webp");
 }
 
-.original-band-footer {
+.edge-fill-lifestyle.edge-fill-left {
+  background-image: url("assets/lifestyle-edge-left.webp");
+}
+
+.edge-fill-lifestyle.edge-fill-right {
+  background-image: url("assets/lifestyle-edge-right.webp");
+}
+
+.edge-fill-footer {
   top: 419.88vw;
   height: 30.43vw;
-  background-image: url("assets/footer-original-band.webp");
+}
+
+.edge-fill-footer.edge-fill-left {
+  background-image: url("assets/footer-edge-left.webp");
+}
+
+.edge-fill-footer.edge-fill-right {
+  background-image: url("assets/footer-edge-right.webp");
 }
 
 .desktop-page {
