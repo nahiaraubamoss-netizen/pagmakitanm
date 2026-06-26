@@ -49,7 +49,7 @@ img {
 
 .fixed-header-strip {
   position: fixed;
-  top: -0.45vw;
+  top: -1.2vw;
   left: 0;
   z-index: 19;
   width: 100%;
@@ -59,7 +59,7 @@ img {
 
 .desktop-nav {
   position: fixed;
-  top: 3.93vw;
+  top: 3.18vw;
   left: 0;
   z-index: 20;
   width: 100%;
@@ -74,8 +74,11 @@ img {
   width: 43.6vw;
   height: 2.35vw;
   content: "";
-  background: #05090b;
+  background: rgb(5 9 11 / 62%);
+  border: 0.04vw solid rgb(255 255 255 / 7%);
   border-radius: 0.45vw;
+  backdrop-filter: blur(0.38vw);
+  box-shadow: 0 0.28vw 1.15vw rgb(0 0 0 / 18%);
 }
 
 .desktop-nav a {
