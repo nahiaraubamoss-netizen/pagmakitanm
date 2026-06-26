@@ -139,11 +139,6 @@ img {
   transition: opacity 160ms ease;
 }
 
-.transport-hover:hover span,
-.transport-hover:focus-within span {
-  opacity: 1;
-}
-
 .deposit-mask,
 .battery-mask,
 .steel-mask {
@@ -211,9 +206,41 @@ img {
   transition: opacity 160ms ease;
 }
 
-.feature-hover:hover span,
-.feature-hover:focus-within span {
+.terrain-info.is-hovered span,
+.terrain-info.is-active span {
   opacity: 1;
+}
+
+.terrain-trigger {
+  position: absolute;
+  z-index: 5;
+  width: 3.15vw;
+  height: 3.15vw;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.terrain-trigger-one {
+  top: 110.25vw;
+  left: 65vw;
+}
+
+.terrain-trigger-two {
+  top: 110.25vw;
+  left: 7.31vw;
+}
+
+.terrain-trigger-three {
+  top: 139.8vw;
+  left: 65.25vw;
+}
+
+.terrain-trigger-four {
+  top: 139.88vw;
+  left: 7.46vw;
 }
 
 .step-number-svg {
