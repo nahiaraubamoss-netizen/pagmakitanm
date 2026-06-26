@@ -14,27 +14,12 @@ html {
 }
 
 body {
-  position: relative;
   margin: 0;
   min-width: 320px;
   background: var(--black);
   color: #fff;
   font-family: "Space Grotesk", Arial, sans-serif;
   overflow-x: hidden;
-}
-
-body::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 529.8vw;
-  content: "";
-  background-image: url("assets/desktop-design.png");
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
-  pointer-events: none;
 }
 
 img {
