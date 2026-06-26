@@ -106,22 +106,22 @@ img {
 
 .transport-mask {
   position: absolute;
-  top: 113.55vw;
-  left: 67.95vw;
+  top: 108.8vw;
+  left: 64.75vw;
   z-index: 2;
-  width: 24.2vw;
-  height: 5.55vw;
+  width: 30vw;
+  height: 12.4vw;
   background: #000;
   pointer-events: none;
 }
 
 .transport-hover {
   position: absolute;
-  top: 110.3vw;
-  left: 68.6vw;
+  top: 108.8vw;
+  left: 64.75vw;
   z-index: 4;
-  width: 18.8vw;
-  height: 2.7vw;
+  width: 30vw;
+  height: 12.4vw;
   cursor: default;
 }
 
@@ -144,27 +144,27 @@ img {
 .steel-mask {
   position: absolute;
   z-index: 3;
-  height: 6.6vw;
+  height: 12.4vw;
   background: #000;
   pointer-events: none;
 }
 
 .deposit-mask {
-  top: 113.45vw;
-  left: 10vw;
-  width: 26.2vw;
+  top: 108.8vw;
+  left: 7.2vw;
+  width: 29.2vw;
 }
 
 .battery-mask {
-  top: 142.75vw;
-  left: 10.45vw;
-  width: 19.5vw;
+  top: 138.35vw;
+  left: 7.25vw;
+  width: 24.4vw;
 }
 
 .steel-mask {
-  top: 142.65vw;
-  left: 67.85vw;
-  width: 26.5vw;
+  top: 138.35vw;
+  left: 65vw;
+  width: 30vw;
 }
 
 .feature-hover {
@@ -175,21 +175,24 @@ img {
 }
 
 .deposit-hover {
-  top: 110.3vw;
-  left: 10.92vw;
-  width: 15.8vw;
+  top: 108.8vw;
+  left: 7.2vw;
+  width: 29.2vw;
+  height: 12.4vw;
 }
 
 .battery-hover {
-  top: 139.5vw;
-  left: 11.4vw;
-  width: 13.3vw;
+  top: 138.35vw;
+  left: 7.25vw;
+  width: 24.4vw;
+  height: 12.4vw;
 }
 
 .steel-hover {
-  top: 139.5vw;
-  left: 68.65vw;
-  width: 11.8vw;
+  top: 138.35vw;
+  left: 65vw;
+  width: 30vw;
+  height: 12.4vw;
 }
 
 .feature-hover span {
@@ -208,6 +211,43 @@ img {
 
 .terrain-info.is-hovered span,
 .terrain-info.is-active span {
+  opacity: 1;
+}
+
+.terrain-info span {
+  display: none;
+}
+
+.terrain-info::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: url("assets/desktop-design.png");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.transport-hover::before {
+  background-position: -64.75vw -108.8vw;
+}
+
+.deposit-hover::before {
+  background-position: -7.2vw -108.8vw;
+}
+
+.battery-hover::before {
+  background-position: -7.25vw -138.35vw;
+}
+
+.steel-hover::before {
+  background-position: -65vw -138.35vw;
+}
+
+.terrain-info.is-hovered::before,
+.terrain-info.is-active::before {
   opacity: 1;
 }
 
