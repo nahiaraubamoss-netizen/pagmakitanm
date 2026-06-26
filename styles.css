@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  position: relative;
   margin: 0;
   min-width: 320px;
   background: var(--black);
@@ -26,70 +25,6 @@ body {
 img {
   display: block;
   max-width: 100%;
-}
-
-.edge-fill {
-  position: absolute;
-  z-index: 0;
-  width: 7.5vw;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  pointer-events: none;
-}
-
-.edge-fill-left {
-  left: 0;
-}
-
-.edge-fill-right {
-  right: 0;
-}
-
-.edge-fill-hero {
-  top: 0;
-  height: 53.67vw;
-}
-
-.edge-fill-hero.edge-fill-left {
-  background-image: url("assets/hero-edge-left.webp");
-}
-
-.edge-fill-hero.edge-fill-right {
-  background-image: url("assets/hero-edge-right.webp");
-}
-
-.edge-fill-icons {
-  top: 53.67vw;
-  left: 0;
-  width: 100%;
-  height: 8.17vw;
-  background: #0d525f;
-}
-
-.edge-fill-lifestyle {
-  top: 301.02vw;
-  height: 40.6vw;
-}
-
-.edge-fill-lifestyle.edge-fill-left {
-  background-image: url("assets/lifestyle-edge-left.webp");
-}
-
-.edge-fill-lifestyle.edge-fill-right {
-  background-image: url("assets/lifestyle-edge-right.webp");
-}
-
-.edge-fill-footer {
-  top: 419.88vw;
-  height: 30.43vw;
-}
-
-.edge-fill-footer.edge-fill-left {
-  background-image: url("assets/footer-edge-left.webp");
-}
-
-.edge-fill-footer.edge-fill-right {
-  background-image: url("assets/footer-edge-right.webp");
 }
 
 .desktop-page {
