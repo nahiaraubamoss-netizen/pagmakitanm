@@ -63,7 +63,7 @@ img {
 .lifestyle-edge {
   top: 318.72vw;
   width: 5vw;
-  height: 36.05vw;
+  height: 42.99vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -76,6 +76,24 @@ img {
 .lifestyle-edge-right {
   right: 0;
   background-image: url("assets/lifestyle-right-edge.webp");
+}
+
+.footer-edge {
+  top: 444.59vw;
+  width: 5vw;
+  height: 32.21vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.footer-edge-left {
+  left: 0;
+  background-image: url("assets/footer-left-edge.webp");
+}
+
+.footer-edge-right {
+  right: 0;
+  background-image: url("assets/footer-right-edge.webp");
 }
 
 .desktop-page {
