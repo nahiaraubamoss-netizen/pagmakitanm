@@ -264,9 +264,8 @@ img {
   width: 100%;
   height: 6.95vw;
   content: "";
-  background-image: url("assets/desktop-original.png");
   background-repeat: no-repeat;
-  background-size: 100vw auto;
+  background-size: 100% 100%;
   clip-path: polygon(21.6% 0, 100% 0, 100% 31.5%, 77.2% 100%, 0 100%, 0 65.7%);
   opacity: 0;
   pointer-events: none;
@@ -285,7 +284,7 @@ img {
 }
 
 .step-overlay-one::before {
-  background-position: -7.87vw -326.88vw;
+  background-image: url("assets/step-verter.webp");
 }
 
 .step-overlay-two {
@@ -294,7 +293,7 @@ img {
 }
 
 .step-overlay-two::before {
-  background-position: -36.52vw -326.88vw;
+  background-image: url("assets/step-agregar.webp");
 }
 
 .step-overlay-three {
@@ -303,7 +302,7 @@ img {
 }
 
 .step-overlay-three::before {
-  background-position: -64.24vw -326.78vw;
+  background-image: url("assets/step-disfrutar.webp");
 }
 
 .color-swap {
@@ -536,9 +535,13 @@ img {
   fill: #fff;
 }
 
-.desktop-page img {
+.desktop-page > img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.desktop-page > img {
   margin-bottom: -1.6vw;
 }
 
