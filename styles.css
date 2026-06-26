@@ -54,6 +54,30 @@ img {
   max-width: 100%;
 }
 
+.edge-fill {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lifestyle-edge {
+  top: 318.72vw;
+  width: 5vw;
+  height: 36.05vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.lifestyle-edge-left {
+  left: 0;
+  background-image: url("assets/lifestyle-left-edge.webp");
+}
+
+.lifestyle-edge-right {
+  right: 0;
+  background-image: url("assets/lifestyle-right-edge.webp");
+}
+
 .desktop-page {
   position: relative;
   z-index: 1;
