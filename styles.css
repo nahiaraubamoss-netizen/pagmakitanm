@@ -1,6 +1,7 @@
 :root {
   --black: #000;
   --makita: #1b9db7;
+  --page-scale: 0.9;
   --teal-dark: #042126;
 }
 
@@ -18,6 +19,7 @@ body {
   background: var(--black);
   color: #fff;
   font-family: "Space Grotesk", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -28,9 +30,12 @@ img {
 .desktop-page {
   position: relative;
   width: 100%;
+  margin-bottom: -52.8vw;
   background: var(--black);
   overflow: hidden;
   padding-bottom: 0;
+  transform: scale(var(--page-scale));
+  transform-origin: top center;
 }
 
 .desktop-page::after {
