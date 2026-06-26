@@ -59,11 +59,8 @@ img {
 
 .original-band-footer {
   top: 419.88vw;
-  height: 120vw;
-  background-color: #0d525f;
+  height: 30.43vw;
   background-image: url("assets/footer-original-band.webp");
-  background-position: top center;
-  background-size: 100% auto;
 }
 
 .desktop-page {
