@@ -1,6 +1,7 @@
 :root {
   --black: #000;
   --makita: #1b9db7;
+  --page-scale: 0.94;
   --teal-dark: #042126;
 }
 
@@ -30,9 +31,12 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
+  margin-bottom: calc((var(--page-scale) - 1) * 529.8vw);
   background: var(--black);
   overflow: hidden;
   padding-bottom: 0;
+  transform: scale(var(--page-scale));
+  transform-origin: top center;
 }
 
 .desktop-page::after {
