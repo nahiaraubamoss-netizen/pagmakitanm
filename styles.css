@@ -1,7 +1,6 @@
 :root {
   --black: #000;
   --makita: #1b9db7;
-  --page-scale: 0.9;
   --teal-dark: #042126;
 }
 
@@ -14,7 +13,6 @@ html {
 }
 
 body {
-  position: relative;
   margin: 0;
   min-width: 320px;
   background: var(--black);
@@ -23,89 +21,18 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  position: absolute;
-  top: 56.82vw;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 8.65vw;
-  content: "";
-  background: #0d525f;
-  pointer-events: none;
-}
-
-body::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  width: 5vw;
-  height: 56.82vw;
-  content: "";
-  background-image: url("assets/hero-right-texture.webp");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  pointer-events: none;
-}
-
 img {
   display: block;
   max-width: 100%;
-}
-
-.edge-fill {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.lifestyle-edge {
-  top: 318.72vw;
-  width: 5vw;
-  height: 42.99vw;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.lifestyle-edge-left {
-  left: 0;
-  background-image: url("assets/lifestyle-left-edge.webp");
-}
-
-.lifestyle-edge-right {
-  right: 0;
-  background-image: url("assets/lifestyle-right-edge.webp");
-}
-
-.footer-edge {
-  top: 444.59vw;
-  width: 5vw;
-  height: 32.21vw;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.footer-edge-left {
-  left: 0;
-  background-image: url("assets/footer-left-edge.webp");
-}
-
-.footer-edge-right {
-  right: 0;
-  background-image: url("assets/footer-right-edge.webp");
 }
 
 .desktop-page {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-bottom: -52.8vw;
   background: var(--black);
   overflow: hidden;
   padding-bottom: 0;
-  transform: scale(var(--page-scale));
-  transform-origin: top center;
 }
 
 .desktop-page::after {
