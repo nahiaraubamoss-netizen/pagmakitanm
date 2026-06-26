@@ -12,11 +12,17 @@ const terrainInfos = {
   transport: document.querySelector(".transport-hover"),
 };
 
+const setHeaderState = () => {
+  document.body.classList.toggle("is-scrolled", window.scrollY > 12);
+};
+
 const setActiveDot = (dot) => {
   colorDots.forEach((item) => item?.classList.toggle("is-active", item === dot));
 };
 
+setHeaderState();
 setActiveDot(redDot);
+window.addEventListener("scroll", setHeaderState, { passive: true });
 
 greenDot?.addEventListener("click", () => {
   colorSwap?.classList.add("is-green-active");
