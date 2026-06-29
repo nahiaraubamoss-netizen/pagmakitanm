@@ -2,7 +2,11 @@ const colorSwap = document.querySelector(".color-swap");
 const greenDot = document.querySelector(".color-dot-green");
 const redDot = document.querySelector(".color-dot-red");
 const blueDot = document.querySelector(".color-dot-blue");
+const leftArrow = document.querySelector(".color-arrow-left");
+const rightArrow = document.querySelector(".color-arrow-right");
 const colorDots = [blueDot, redDot, greenDot];
+const colorOrder = ["blue", "red", "green"];
+let activeColor = "red";
 const stepOverlays = document.querySelectorAll(".step-overlay");
 const terrainTriggers = document.querySelectorAll(".terrain-trigger");
 const terrainInfos = {
@@ -20,31 +24,52 @@ const setActiveDot = (dot) => {
   colorDots.forEach((item) => item?.classList.toggle("is-active", item === dot));
 };
 
+const selectColor = (color) => {
+  if (!colorSwap) return;
+
+  activeColor = color;
+  colorSwap.classList.toggle("is-blue-active", color === "blue");
+  colorSwap.classList.toggle("is-green-active", color === "green");
+
+  if (color === "red") {
+    colorSwap.classList.add("is-resetting");
+    requestAnimationFrame(() => {
+      colorSwap.classList.remove("is-resetting");
+    });
+  }
+
+  const activeDot = {
+    blue: blueDot,
+    red: redDot,
+    green: greenDot,
+  }[color];
+  setActiveDot(activeDot);
+};
+
+const moveColor = (direction) => {
+  const currentIndex = colorOrder.indexOf(activeColor);
+  const nextIndex = (currentIndex + direction + colorOrder.length) % colorOrder.length;
+  selectColor(colorOrder[nextIndex]);
+};
+
 setHeaderState();
-setActiveDot(redDot);
+selectColor("red");
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 greenDot?.addEventListener("click", () => {
-  colorSwap?.classList.add("is-green-active");
-  colorSwap?.classList.remove("is-blue-active");
-  setActiveDot(greenDot);
+  selectColor("green");
 });
 
 redDot?.addEventListener("click", () => {
-  colorSwap?.classList.add("is-resetting");
-  colorSwap?.classList.remove("is-green-active");
-  colorSwap?.classList.remove("is-blue-active");
-  setActiveDot(redDot);
-  requestAnimationFrame(() => {
-    colorSwap?.classList.remove("is-resetting");
-  });
+  selectColor("red");
 });
 
 blueDot?.addEventListener("click", () => {
-  colorSwap?.classList.add("is-blue-active");
-  colorSwap?.classList.remove("is-green-active");
-  setActiveDot(blueDot);
+  selectColor("blue");
 });
+
+leftArrow?.addEventListener("click", () => moveColor(-1));
+rightArrow?.addEventListener("click", () => moveColor(1));
 
 stepOverlays.forEach((overlay) => {
   overlay.addEventListener("click", () => {

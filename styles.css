@@ -544,11 +544,11 @@ img {
 
 .color-dots-cover {
   position: absolute;
-  top: 42.25vw;
-  left: 44.35vw;
+  top: 42.44vw;
+  left: 44.58vw;
   z-index: 4;
-  width: 11.3vw;
-  height: 3.2vw;
+  width: 10.85vw;
+  height: 2.85vw;
   content: "";
   background: #000;
   pointer-events: none;
@@ -587,8 +587,13 @@ img {
   display: block;
   object-fit: contain;
   transform-origin: center center;
-  will-change: opacity;
-  transition: opacity 240ms ease;
+  will-change: top, left, width, height, opacity;
+  transition:
+    top 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    left 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
   opacity: 0;
   pointer-events: none;
   z-index: 2;
@@ -709,6 +714,27 @@ img {
 .color-dot-green {
   left: 53.01vw;
   background: #716d4f;
+}
+
+.color-arrow {
+  position: absolute;
+  z-index: 6;
+  top: 42.18vw;
+  width: 3vw;
+  height: 3.2vw;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.color-arrow-left {
+  left: 39.85vw;
+}
+
+.color-arrow-right {
+  left: 57.15vw;
 }
 
 .footer-social-filled {
