@@ -544,16 +544,16 @@ img {
 
 .color-dots-cover {
   position: absolute;
-  top: 42.18vw;
+  top: 42.02vw;
   left: 44.35vw;
   z-index: 4;
   width: 11.65vw;
-  height: 3.55vw;
+  height: 3.9vw;
   content: "";
   background:
-    radial-gradient(circle at 12.9% 52%, #000 0 1.62vw, transparent 1.64vw),
-    radial-gradient(circle at 47.0% 52%, #000 0 1.62vw, transparent 1.64vw),
-    radial-gradient(circle at 82.8% 52%, #000 0 1.62vw, transparent 1.64vw);
+    radial-gradient(circle at 16.2% 52%, #000 0 1.88vw, transparent 1.9vw),
+    radial-gradient(circle at 49.7% 52%, #000 0 1.88vw, transparent 1.9vw),
+    radial-gradient(circle at 85.0% 52%, #000 0 1.88vw, transparent 1.9vw);
   pointer-events: none;
 }
 
