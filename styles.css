@@ -76,38 +76,62 @@ img {
 }
 
 .desktop-nav::before {
-  display: none;
+  position: absolute;
+  top: -0.52vw;
+  left: 39.95vw;
+  z-index: -1;
+  width: 47vw;
+  height: 2.38vw;
+  content: "";
+  background: #05090b;
 }
 
 .desktop-nav a {
   position: absolute;
   top: 0;
-  color: transparent;
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 1.39vw;
-  line-height: 1;
+  --underline-extra: 0vw;
+  display: block;
+  height: 1.8vw;
+  padding: 0.14vw 0.24vw 0.18vw;
+  color: #fff;
+  background: transparent;
+  font-family: "Oxygen", Arial, sans-serif;
+  font-size: 1.282vw;
+  font-weight: 400;
+  line-height: 1.1;
   text-decoration: none;
-  transition: color 160ms ease;
+  white-space: nowrap;
+  transition: background 140ms ease, color 140ms ease;
 }
 
 .desktop-nav a:nth-child(1) {
   left: 40.77vw;
+  width: 3.95vw;
+  --underline-extra: 0.15vw;
 }
 
 .desktop-nav a:nth-child(2) {
   left: 46.77vw;
+  width: 10.85vw;
+  --underline-extra: 0.2vw;
 }
 
 .desktop-nav a:nth-child(3) {
   left: 59.31vw;
+  width: 6.55vw;
+  --underline-extra: 0.22vw;
 }
 
 .desktop-nav a:nth-child(4) {
   left: 68.41vw;
+  width: 9.75vw;
+  --underline-extra: 0.28vw;
 }
 
 .desktop-nav a:nth-child(5) {
   left: 80.46vw;
+  width: 6.15vw;
+  --underline-extra: 0.22vw;
 }
 
 .desktop-nav a:hover,
@@ -115,24 +139,35 @@ img {
   color: var(--makita);
 }
 
+.desktop-nav a:hover::after,
+.desktop-nav a:focus-visible::after {
+  position: absolute;
+  right: calc(-1 * var(--underline-extra));
+  bottom: -0.18vw;
+  left: 0;
+  height: 0.07vw;
+  content: "";
+  background: var(--makita);
+}
+
 .transport-mask {
   position: absolute;
-  top: 98.45vw;
-  left: 66.2vw;
+  top: 97.25vw;
+  left: 64.75vw;
   z-index: 2;
-  width: 31.8vw;
-  height: 8.3vw;
+  width: 32.6vw;
+  height: 10.05vw;
   background: #000;
   pointer-events: none;
 }
 
 .transport-hover {
   position: absolute;
-  top: 98.45vw;
-  left: 66.2vw;
+  top: 97.25vw;
+  left: 64.75vw;
   z-index: 4;
-  width: 31.8vw;
-  height: 8.3vw;
+  width: 32.6vw;
+  height: 10.05vw;
   cursor: default;
 }
 
@@ -161,22 +196,24 @@ img {
 }
 
 .deposit-mask {
-  top: 98.45vw;
-  left: 13.3vw;
-  width: 26.7vw;
-  height: 8.3vw;
+  top: 97.75vw;
+  left: 12.85vw;
+  width: 27.5vw;
+  height: 9.35vw;
 }
 
 .battery-mask {
-  top: 128.0vw;
-  left: 13.4vw;
-  width: 27.4vw;
+  top: 127.15vw;
+  left: 12.85vw;
+  width: 21.95vw;
+  height: 9.95vw;
 }
 
 .steel-mask {
-  top: 128.0vw;
-  left: 66.2vw;
-  width: 31.8vw;
+  top: 126.8vw;
+  left: 64.75vw;
+  width: 32.6vw;
+  height: 10.45vw;
 }
 
 .feature-hover {
@@ -187,24 +224,24 @@ img {
 }
 
 .deposit-hover {
-  top: 98.45vw;
-  left: 13.3vw;
-  width: 26.7vw;
-  height: 8.3vw;
+  top: 97.75vw;
+  left: 12.85vw;
+  width: 27.5vw;
+  height: 9.35vw;
 }
 
 .battery-hover {
-  top: 128.0vw;
-  left: 13.4vw;
-  width: 27.4vw;
-  height: 8.3vw;
+  top: 127.15vw;
+  left: 12.85vw;
+  width: 21.95vw;
+  height: 9.95vw;
 }
 
 .steel-hover {
-  top: 128.0vw;
-  left: 66.2vw;
-  width: 31.8vw;
-  height: 8.3vw;
+  top: 126.8vw;
+  left: 64.75vw;
+  width: 32.6vw;
+  height: 10.45vw;
 }
 
 .feature-hover span {
@@ -243,19 +280,19 @@ img {
 }
 
 .transport-hover::before {
-  background-position: -66.2vw -98.45vw;
+  background-position: -64.75vw -97.25vw;
 }
 
 .deposit-hover::before {
-  background-position: -13.3vw -98.45vw;
+  background-position: -12.85vw -97.75vw;
 }
 
 .battery-hover::before {
-  background-position: -13.4vw -128vw;
+  background-position: -12.85vw -127.15vw;
 }
 
 .steel-hover::before {
-  background-position: -66.2vw -128vw;
+  background-position: -64.75vw -126.8vw;
 }
 
 .terrain-info.is-hovered::before,
@@ -325,61 +362,130 @@ img {
 .step-overlay {
   position: absolute;
   z-index: 4;
-  width: 21.9vw;
-  height: 21.95vw;
+  overflow: hidden;
   padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
 }
 
-.step-overlay::before {
+.step-overlay::before,
+.step-overlay::after {
   position: absolute;
   left: 0;
-  bottom: 0;
-  z-index: 0;
+  top: 0;
   width: 100%;
-  height: 6.95vw;
+  height: 100%;
   content: "";
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  clip-path: polygon(21.6% 0, 100% 0, 100% 31.5%, 77.2% 100%, 0 100%, 0 65.7%);
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 160ms ease;
 }
 
-.step-overlay:hover::before,
-.step-overlay:focus-visible::before,
-.step-overlay.is-active::before {
+.step-overlay::before {
+  z-index: 1;
   opacity: 1;
 }
 
+.step-overlay::after {
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(8.65vw);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.step-overlay:hover::after,
+.step-overlay:focus-visible::after,
+.step-overlay.is-active::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .step-overlay-one {
-  top: 284.54vw;
-  left: 12.65vw;
+  top: 283.75vw;
+  left: 12.6vw;
+  width: 21.85vw;
+  height: 21.95vw;
 }
 
 .step-overlay-one::before {
-  background-image: url("assets/step-verter.webp");
+  background-image: url("assets/step-clean-verter.webp");
+}
+
+.step-overlay-one::after {
+  background-image: url("assets/cartel-verter.svg");
 }
 
 .step-overlay-two {
-  top: 284.24vw;
-  left: 38.96vw;
+  top: 283.7vw;
+  left: 38.92vw;
+  width: 22vw;
+  height: 22vw;
 }
 
 .step-overlay-two::before {
-  background-image: url("assets/step-agregar.webp");
+  background-image: url("assets/step-clean-agregar.webp");
+}
+
+.step-overlay-two::after {
+  background-image: url("assets/cartel-agregar.svg");
 }
 
 .step-overlay-three {
-  top: 284.3vw;
-  left: 65.43vw;
+  top: 283.75vw;
+  left: 65.35vw;
+  width: 21.85vw;
+  height: 21.9vw;
 }
 
 .step-overlay-three::before {
-  background-image: url("assets/step-disfrutar.webp");
+  background-image: url("assets/step-clean-disfrutar.webp");
+}
+
+.step-overlay-three::after {
+  background-image: url("assets/cartel-disfrutar.svg");
+}
+
+.ticker-banner {
+  position: absolute;
+  top: 526.86vw;
+  left: 13.25vw;
+  z-index: 4;
+  width: 73.2vw;
+  height: 3.75vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #031719;
+}
+
+.ticker-track {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: max-content;
+  animation: ticker-move 15s linear infinite;
+}
+
+.ticker-track span {
+  flex: 0 0 auto;
+  padding-right: 2.4vw;
+  color: #6ed8ff;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 3.0vw;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@keyframes ticker-move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-25%);
+  }
 }
 
 .color-swap {
@@ -618,4 +724,23 @@ img {
 
 .mobile-page {
   display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    min-width: 0;
+  }
+
+  .desktop-page {
+    width: 100vw;
+    transform: none;
+  }
+
+  .desktop-page > img {
+    width: 100vw;
+  }
+
+  .fixed-header-strip {
+    width: 100vw;
+  }
 }
