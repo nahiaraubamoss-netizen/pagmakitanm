@@ -34,7 +34,7 @@ img {
 .desktop-page {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   min-height: calc(100vw * 12422 / 1945);
   margin-bottom: 0;
   background: var(--black) url("assets/page-background.webp") center top / 100% 100% no-repeat;
@@ -818,6 +818,7 @@ img {
   .mobile-page {
     display: block;
     width: 100vw;
+    max-width: 100%;
     min-height: calc(100vw * 10582 / 1179);
     background: #000;
     overflow: hidden;
