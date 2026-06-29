@@ -796,23 +796,36 @@ img {
   display: none;
 }
 
+.mobile-page > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   body {
     min-width: 0;
   }
 
   .desktop-page {
-    width: 100vw;
-    min-height: calc(100vw * 12422 / 1945);
-    transform: none;
-  }
-
-  .desktop-page > img {
-    width: 100vw;
+    display: none;
   }
 
   .fixed-header-strip {
+    display: none;
+  }
+
+  .mobile-page {
+    display: block;
     width: 100vw;
+    min-height: calc(100vw * 10582 / 1179);
+    background: #000;
+    overflow: hidden;
+  }
+
+  .mobile-page > img {
+    width: 100vw;
+    max-width: none;
   }
 }
 
