@@ -10,11 +10,15 @@
 }
 
 html {
+  width: 100%;
   background: var(--black);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
   min-width: 320px;
   background: var(--black);
   color: #fff;
@@ -31,6 +35,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
+  min-height: calc(100vw * 12422 / 1945);
   margin-bottom: 0;
   background: var(--black);
   overflow: hidden;
@@ -759,6 +764,7 @@ img {
 
   .desktop-page {
     width: 100vw;
+    min-height: calc(100vw * 12422 / 1945);
     transform: none;
   }
 
@@ -768,5 +774,26 @@ img {
 
   .fixed-header-strip {
     width: 100vw;
+  }
+}
+
+@media (hover: none) {
+  .desktop-nav a:active {
+    color: var(--makita);
+  }
+
+  .desktop-nav a:active::after {
+    position: absolute;
+    right: calc(-1 * var(--underline-extra));
+    bottom: -0.18vw;
+    left: 0;
+    height: 0.07vw;
+    content: "";
+    background: var(--makita);
+  }
+
+  .color-dot:active {
+    border-width: 0.34vw;
+    transform: translateY(-0.45vw);
   }
 }
