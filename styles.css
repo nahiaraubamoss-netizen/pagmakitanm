@@ -135,26 +135,15 @@ img {
 
 .desktop-nav a:nth-child(5) {
   left: 76.9vw;
-  width: 7.1vw;
+  width: 8.55vw;
   --underline-extra: 0.22vw;
   background: #05090b;
-  box-shadow: 0 0 0 0.28vw #05090b;
+  box-shadow: 0 0 0 0.62vw #05090b;
 }
 
 .desktop-nav a:hover,
 .desktop-nav a:focus-visible {
   color: var(--makita);
-}
-
-.desktop-nav a:hover::after,
-.desktop-nav a:focus-visible::after {
-  position: absolute;
-  right: calc(-1 * var(--underline-extra));
-  bottom: -0.18vw;
-  left: 0;
-  height: 0.07vw;
-  content: "";
-  background: var(--makita);
 }
 
 .transport-mask {
@@ -830,16 +819,6 @@ img {
 @media (hover: none) {
   .desktop-nav a:active {
     color: var(--makita);
-  }
-
-  .desktop-nav a:active::after {
-    position: absolute;
-    right: calc(-1 * var(--underline-extra));
-    bottom: -0.18vw;
-    left: 0;
-    height: 0.07vw;
-    content: "";
-    background: var(--makita);
   }
 
   .color-dot:active {
