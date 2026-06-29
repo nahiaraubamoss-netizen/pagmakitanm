@@ -116,28 +116,29 @@ img {
 }
 
 .desktop-nav a:nth-child(2) {
-  left: 46.77vw;
+  left: 45.9vw;
   width: 10.85vw;
   --underline-extra: 0.2vw;
 }
 
 .desktop-nav a:nth-child(3) {
-  left: 59.31vw;
+  left: 57.3vw;
   width: 6.55vw;
   --underline-extra: 0.22vw;
 }
 
 .desktop-nav a:nth-child(4) {
-  left: 68.41vw;
+  left: 65.7vw;
   width: 9.75vw;
   --underline-extra: 0.28vw;
 }
 
 .desktop-nav a:nth-child(5) {
-  left: 80.46vw;
-  width: 6.15vw;
+  left: 76.9vw;
+  width: 7.1vw;
   --underline-extra: 0.22vw;
   background: #05090b;
+  box-shadow: 0 0 0 0.28vw #05090b;
 }
 
 .desktop-nav a:hover,
