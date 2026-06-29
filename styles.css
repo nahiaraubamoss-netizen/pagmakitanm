@@ -454,22 +454,23 @@ img {
 
 .ticker-banner {
   position: absolute;
-  top: 521.65vw;
-  left: 11.8vw;
+  top: 522.1vw;
+  left: 12.6vw;
   z-index: 5;
-  width: 80.5vw;
-  height: 9.2vw;
+  width: 74.8vw;
+  height: 8.35vw;
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 0 0 0 4.35vw;
-  background: #000;
+  padding: 0 2.65vw 0 3.55vw;
+  background: transparent;
+  clip-path: polygon(2.25% 0, 100% 0, 100% 72%, 97.5% 100%, 0 100%, 0 27%);
 }
 
 .ticker-banner::before,
 .ticker-banner::after {
   position: absolute;
-  inset: 0.45vw 4.9vw 0.4vw 0.8vw;
+  inset: 0;
   content: "";
   pointer-events: none;
 }
