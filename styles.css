@@ -137,6 +137,7 @@ img {
   left: 80.46vw;
   width: 6.15vw;
   --underline-extra: 0.22vw;
+  background: #05090b;
 }
 
 .desktop-nav a:hover,
