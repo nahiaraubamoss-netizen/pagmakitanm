@@ -739,19 +739,19 @@ img {
 
 .color-name {
   position: absolute;
-  top: 45.48vw;
+  top: 46.48vw;
   left: 44.1vw;
   z-index: 6;
   display: block;
   width: 11.8vw;
-  min-height: 1.25vw;
-  padding-top: 0.08vw;
+  min-height: 1.65vw;
+  padding-top: 0;
   background: #000;
   color: #fff;
   font-family: "Oxygen", Arial, sans-serif;
-  font-size: 0.82vw;
+  font-size: 1.28vw;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.2;
   text-align: center;
   pointer-events: none;
 }
