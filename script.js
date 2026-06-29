@@ -4,8 +4,14 @@ const redDot = document.querySelector(".color-dot-red");
 const blueDot = document.querySelector(".color-dot-blue");
 const leftArrow = document.querySelector(".color-arrow-left");
 const rightArrow = document.querySelector(".color-arrow-right");
+const colorName = document.querySelector(".color-name");
 const colorDots = [blueDot, redDot, greenDot];
 const colorOrder = ["blue", "red", "green"];
+const colorLabels = {
+  blue: "Celeste cielo",
+  red: "Rojo óxido",
+  green: "Verde oscuro",
+};
 let activeColor = "red";
 const stepOverlays = document.querySelectorAll(".step-overlay");
 const terrainTriggers = document.querySelectorAll(".terrain-trigger");
@@ -44,6 +50,9 @@ const selectColor = (color) => {
     green: greenDot,
   }[color];
   setActiveDot(activeDot);
+  if (colorName) {
+    colorName.textContent = colorLabels[color];
+  }
 };
 
 const moveColor = (direction) => {
