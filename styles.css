@@ -416,7 +416,7 @@ img {
 }
 
 .step-overlay-one::after {
-  background-image: url("assets/cartel-verter.svg");
+  background-image: url("assets/cartel-verter-nuevo.webp");
 }
 
 .step-overlay-two {
@@ -431,7 +431,7 @@ img {
 }
 
 .step-overlay-two::after {
-  background-image: url("assets/cartel-agregar.svg");
+  background-image: url("assets/cartel-agregar-nuevo.webp");
 }
 
 .step-overlay-three {
@@ -446,7 +446,7 @@ img {
 }
 
 .step-overlay-three::after {
-  background-image: url("assets/cartel-disfrutar.svg");
+  background-image: url("assets/cartel-disfrutar-nuevo.webp");
 }
 
 .ticker-banner {
