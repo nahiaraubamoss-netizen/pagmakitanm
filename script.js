@@ -89,11 +89,14 @@ stepOverlays.forEach((overlay) => {
 terrainTriggers.forEach((trigger) => {
   const info = terrainInfos[trigger.dataset.feature];
 
-  trigger.addEventListener("mouseenter", () => {
+  const showInfo = () => {
     info?.classList.add("is-hovered");
-  });
+  };
 
-  trigger.addEventListener("mouseleave", () => {
+  trigger.addEventListener("pointerenter", showInfo);
+  trigger.addEventListener("pointerdown", showInfo);
+
+  trigger.addEventListener("pointerleave", () => {
     info?.classList.remove("is-hovered");
   });
 
