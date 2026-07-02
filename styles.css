@@ -267,7 +267,7 @@ img {
   position: absolute;
   inset: 0;
   content: "";
-  background-image: url("assets/desktop-design.jpg");
+  background-image: url("assets/desktop-design-hq.jpg");
   background-repeat: no-repeat;
   background-size: 100vw auto;
   opacity: 0;
@@ -299,8 +299,8 @@ img {
 .terrain-trigger {
   position: absolute;
   z-index: 5;
-  width: 3.15vw;
-  height: 3.15vw;
+  width: 3.9vw;
+  height: 3.9vw;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -319,8 +319,9 @@ img {
 }
 
 .terrain-trigger-three {
-  top: 103.7vw;
-  left: 53.65vw;
+  top: 108.65vw;
+  left: 53.55vw;
+  z-index: 6;
 }
 
 .terrain-trigger-four {
