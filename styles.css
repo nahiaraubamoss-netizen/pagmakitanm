@@ -267,7 +267,7 @@ img {
   position: absolute;
   inset: 0;
   content: "";
-  background-image: url("assets/desktop-design.png");
+  background-image: url("assets/desktop-design.jpg");
   background-repeat: no-repeat;
   background-size: 100vw auto;
   opacity: 0;
