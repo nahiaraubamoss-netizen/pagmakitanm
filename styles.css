@@ -51,7 +51,7 @@ img {
   width: 100vw;
   height: 66vw;
   content: "";
-  background: url("assets/desktop-design-hq.jpg") center top / 100vw auto no-repeat;
+  background: url("assets/desktop-design-preentrega-v2.jpg") center top / 100vw auto no-repeat;
   pointer-events: none;
 }
 
@@ -287,7 +287,7 @@ img {
   position: absolute;
   inset: 0;
   content: "";
-  background-image: url("assets/desktop-design-hq.jpg");
+  background-image: url("assets/desktop-design-preentrega-v2.jpg");
   background-repeat: no-repeat;
   background-size: 100vw auto;
   opacity: 0;
@@ -432,11 +432,11 @@ img {
 }
 
 .step-overlay-one::before {
-  background-image: url("assets/step-clean-verter.webp");
+  background-image: url("assets/step-clean-verter-v2.webp");
 }
 
 .step-overlay-one::after {
-  background-image: url("assets/cartel-verter-nuevo.webp");
+  background-image: url("assets/cartel-verter-preentrega-v2.webp");
 }
 
 .step-overlay-two {
@@ -447,11 +447,11 @@ img {
 }
 
 .step-overlay-two::before {
-  background-image: url("assets/step-clean-agregar.webp");
+  background-image: url("assets/step-clean-agregar-v2.webp");
 }
 
 .step-overlay-two::after {
-  background-image: url("assets/cartel-agregar-nuevo.webp");
+  background-image: url("assets/cartel-agregar-preentrega-v2.webp");
 }
 
 .step-overlay-three {
@@ -462,11 +462,11 @@ img {
 }
 
 .step-overlay-three::before {
-  background-image: url("assets/step-clean-disfrutar.webp");
+  background-image: url("assets/step-clean-disfrutar-v2.webp");
 }
 
 .step-overlay-three::after {
-  background-image: url("assets/cartel-disfrutar-nuevo.webp");
+  background-image: url("assets/cartel-disfrutar-preentrega-v2.webp");
 }
 
 .ticker-banner {
@@ -803,13 +803,13 @@ img {
   fill: #fff;
 }
 
-.desktop-content > img {
+.desktop-page > img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.desktop-content > img {
+.desktop-page > img {
   margin-bottom: 0;
 }
 
