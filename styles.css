@@ -35,7 +35,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  min-height: calc(100vw * 12422 / 1945);
+  min-height: calc(100vw * 10592 / 1943);
   margin-bottom: 0;
   background: var(--black) url("assets/page-background.webp") center top / 100% 100% no-repeat;
   overflow: hidden;
@@ -85,7 +85,7 @@ img {
   top: -0.52vw;
   left: 39.95vw;
   z-index: -1;
-  width: 47vw;
+  width: 49vw;
   height: 2.38vw;
   content: "";
   background: #05090b;
@@ -148,22 +148,22 @@ img {
 
 .transport-mask {
   position: absolute;
-  top: 97.25vw;
-  left: 64.75vw;
+  top: 88.9vw;
+  left: 12.0vw;
   z-index: 2;
-  width: 32.6vw;
-  height: 10.05vw;
+  width: 24.5vw;
+  height: 11.0vw;
   background: #000;
   pointer-events: none;
 }
 
 .transport-hover {
   position: absolute;
-  top: 97.25vw;
-  left: 64.75vw;
+  top: 88.9vw;
+  left: 12.0vw;
   z-index: 4;
-  width: 32.6vw;
-  height: 10.05vw;
+  width: 24.5vw;
+  height: 11.0vw;
   cursor: default;
 }
 
@@ -192,24 +192,24 @@ img {
 }
 
 .deposit-mask {
-  top: 97.75vw;
-  left: 12.85vw;
-  width: 27.5vw;
-  height: 9.35vw;
+  top: 102.3vw;
+  left: 12.0vw;
+  width: 24.5vw;
+  height: 11.1vw;
 }
 
 .battery-mask {
-  top: 127.15vw;
-  left: 12.85vw;
-  width: 21.95vw;
-  height: 9.95vw;
+  top: 102.3vw;
+  left: 64.65vw;
+  width: 31.8vw;
+  height: 11.1vw;
 }
 
 .steel-mask {
-  top: 126.8vw;
-  left: 64.75vw;
-  width: 32.6vw;
-  height: 10.45vw;
+  top: 88.9vw;
+  left: 64.65vw;
+  width: 31.8vw;
+  height: 11.0vw;
 }
 
 .feature-hover {
@@ -220,24 +220,24 @@ img {
 }
 
 .deposit-hover {
-  top: 97.75vw;
-  left: 12.85vw;
-  width: 27.5vw;
-  height: 9.35vw;
+  top: 102.3vw;
+  left: 12.0vw;
+  width: 24.5vw;
+  height: 11.1vw;
 }
 
 .battery-hover {
-  top: 127.15vw;
-  left: 12.85vw;
-  width: 21.95vw;
-  height: 9.95vw;
+  top: 102.3vw;
+  left: 64.65vw;
+  width: 31.8vw;
+  height: 11.1vw;
 }
 
 .steel-hover {
-  top: 126.8vw;
-  left: 64.75vw;
-  width: 32.6vw;
-  height: 10.45vw;
+  top: 88.9vw;
+  left: 64.65vw;
+  width: 31.8vw;
+  height: 11.0vw;
 }
 
 .feature-hover span {
@@ -276,19 +276,19 @@ img {
 }
 
 .transport-hover::before {
-  background-position: -64.75vw -97.25vw;
+  background-position: -12.0vw -88.9vw;
 }
 
 .deposit-hover::before {
-  background-position: -12.85vw -97.75vw;
+  background-position: -12.0vw -102.3vw;
 }
 
 .battery-hover::before {
-  background-position: -12.85vw -127.15vw;
+  background-position: -64.65vw -102.3vw;
 }
 
 .steel-hover::before {
-  background-position: -64.75vw -126.8vw;
+  background-position: -64.65vw -88.9vw;
 }
 
 .terrain-info.is-hovered::before,
@@ -309,23 +309,23 @@ img {
 }
 
 .terrain-trigger-one {
-  top: 98.75vw;
-  left: 48.5vw;
+  top: 82.95vw;
+  left: 49.25vw;
 }
 
 .terrain-trigger-two {
-  top: 106.3vw;
-  left: 45.7vw;
+  top: 90.25vw;
+  left: 46.6vw;
 }
 
 .terrain-trigger-three {
-  top: 124.35vw;
-  left: 52.95vw;
+  top: 103.7vw;
+  left: 53.65vw;
 }
 
 .terrain-trigger-four {
-  top: 127.4vw;
-  left: 43.05vw;
+  top: 111.0vw;
+  left: 43.55vw;
 }
 
 .step-number-svg {
@@ -404,7 +404,7 @@ img {
 }
 
 .step-overlay-one {
-  top: 283.753vw;
+  top: 233.3vw;
   left: 12.596vw;
   width: 21.851vw;
   height: 22.08vw;
@@ -419,7 +419,7 @@ img {
 }
 
 .step-overlay-two {
-  top: 283.702vw;
+  top: 233.25vw;
   left: 38.920vw;
   width: 22.005vw;
   height: 22.13vw;
@@ -434,7 +434,7 @@ img {
 }
 
 .step-overlay-three {
-  top: 283.753vw;
+  top: 233.3vw;
   left: 65.347vw;
   width: 21.851vw;
   height: 22.03vw;
@@ -450,7 +450,7 @@ img {
 
 .ticker-banner {
   position: absolute;
-  top: 522.1vw;
+  top: 437.6vw;
   left: 12.6vw;
   z-index: 5;
   width: 74.8vw;
@@ -512,7 +512,7 @@ img {
 
 .color-swap {
   position: absolute;
-  top: 460.67vw;
+  top: 376.0vw;
   left: 0;
   z-index: 4;
   width: 100%;
