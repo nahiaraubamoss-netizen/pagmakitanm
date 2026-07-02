@@ -38,9 +38,28 @@ img {
   height: calc(100vw * 10592 / 1943 * var(--page-scale));
   min-height: 0;
   margin-bottom: 0;
-  background: var(--black) url("assets/page-background.webp") center top / 100% 100% no-repeat;
+  background: var(--black);
   overflow: hidden;
   padding-bottom: 0;
+}
+
+.desktop-page::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 66vw;
+  content: "";
+  background: url("assets/desktop-design-hq.jpg") center top / 100vw auto no-repeat;
+  pointer-events: none;
+}
+
+.desktop-content {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  min-height: calc(100vw * 10592 / 1943);
   transform: scale(var(--page-scale));
   transform-origin: top center;
 }
@@ -784,13 +803,13 @@ img {
   fill: #fff;
 }
 
-.desktop-page > img {
+.desktop-content > img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.desktop-page > img {
+.desktop-content > img {
   margin-bottom: 0;
 }
 
