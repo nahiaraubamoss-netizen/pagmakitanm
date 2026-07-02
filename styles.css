@@ -35,7 +35,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  height: calc(100vw * 10592 / 1943 * var(--page-scale));
+  height: calc(100vw * 10409.24 / 1920 * var(--page-scale));
   min-height: 0;
   margin-bottom: 0;
   background: var(--black);
@@ -59,7 +59,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  min-height: calc(100vw * 10592 / 1943);
+  min-height: calc(100vw * 10409.24 / 1920);
   transform: scale(var(--page-scale));
   transform-origin: top center;
 }
