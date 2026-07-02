@@ -393,7 +393,7 @@ img {
 
 .step-overlay::after {
   position: absolute;
-  bottom: 0;
+  bottom: 0.46vw;
   left: 0;
   z-index: 3;
   width: 100%;
