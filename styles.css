@@ -1,7 +1,7 @@
 :root {
   --black: #000;
   --makita: #1b9db7;
-  --page-scale: 1;
+  --page-scale: 0.9;
   --teal-dark: #042126;
 }
 
@@ -35,7 +35,8 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  min-height: calc(100vw * 10592 / 1943);
+  height: calc(100vw * 10592 / 1943 * var(--page-scale));
+  min-height: 0;
   margin-bottom: 0;
   background: var(--black) url("assets/page-background.webp") center top / 100% 100% no-repeat;
   overflow: hidden;
