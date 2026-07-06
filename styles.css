@@ -389,8 +389,6 @@ img {
 }
 
 .step-overlay {
-  --cartel-rest: 8.65vw;
-  --cartel-drop: 0.24vw;
   position: absolute;
   z-index: 4;
   overflow: hidden;
@@ -401,36 +399,63 @@ img {
 }
 
 .step-overlay::before {
-  display: none;
-}
-
-.step-overlay::after {
   position: absolute;
-  bottom: 3.75vw;
   left: 0;
-  z-index: 3;
+  bottom: 0;
+  z-index: 1;
   width: 100%;
-  height: 8.65vw;
+  height: 62%;
   content: "";
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.48) 54%, rgba(0, 0, 0, 0) 100%);
   opacity: 0;
-  transform: translateY(calc(var(--cartel-rest) + var(--cartel-drop)));
+  transform: translateY(40%);
   pointer-events: none;
-  transition: opacity 260ms ease, transform 260ms ease;
-}
-
-.step-overlay:hover::after,
-.step-overlay:focus-visible::after,
-.step-overlay.is-active::after {
-  opacity: 1;
-  transform: translateY(0);
+  transition: opacity 260ms ease, transform 300ms ease;
 }
 
 .step-overlay:hover::before,
 .step-overlay:focus-visible::before,
 .step-overlay.is-active::before {
-  display: none;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-text {
+  position: absolute;
+  left: 2.0vw;
+  bottom: 2.55vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(1.15vw);
+  transition: opacity 240ms ease, transform 280ms ease;
+  pointer-events: none;
+}
+
+.step-overlay:hover .step-text,
+.step-overlay:focus-visible .step-text,
+.step-overlay.is-active .step-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-title {
+  color: #fff;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 3.05vw;
+  font-weight: 400;
+  line-height: 0.92;
+}
+
+.step-subtitle {
+  margin-top: 0.42vw;
+  color: #8be8ff;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.18vw;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .step-overlay-one {
@@ -440,10 +465,6 @@ img {
   height: 22.09vw;
 }
 
-.step-overlay-one::after {
-  background-image: url("assets/step-label-verter-preentrega-v3.webp");
-}
-
 .step-overlay-two {
   top: 227.70vw;
   left: 38.60vw;
@@ -451,19 +472,11 @@ img {
   height: 22.25vw;
 }
 
-.step-overlay-two::after {
-  background-image: url("assets/step-label-agregar-preentrega-v3.webp");
-}
-
 .step-overlay-three {
   top: 227.78vw;
   left: 65.19vw;
   width: 22.10vw;
   height: 22.13vw;
-}
-
-.step-overlay-three::after {
-  background-image: url("assets/step-label-disfrutar-preentrega-v3.webp");
 }
 
 .ticker-banner {
