@@ -14,6 +14,10 @@ const colorLabels = {
 };
 let activeColor = "red";
 const stepOverlays = document.querySelectorAll(".step-overlay");
+const carouselImages = document.querySelectorAll(".action-carousel-image");
+const carouselPrev = document.querySelector(".action-carousel-prev");
+const carouselNext = document.querySelector(".action-carousel-next");
+let activeCarouselImage = 0;
 const terrainTriggers = document.querySelectorAll(".terrain-trigger");
 const terrainInfos = {
   battery: document.querySelector(".battery-hover"),
@@ -35,14 +39,8 @@ const selectColor = (color) => {
 
   activeColor = color;
   colorSwap.classList.toggle("is-blue-active", color === "blue");
+  colorSwap.classList.toggle("is-red-active", color === "red");
   colorSwap.classList.toggle("is-green-active", color === "green");
-
-  if (color === "red") {
-    colorSwap.classList.add("is-resetting");
-    requestAnimationFrame(() => {
-      colorSwap.classList.remove("is-resetting");
-    });
-  }
 
   const activeDot = {
     blue: blueDot,
@@ -59,6 +57,15 @@ const moveColor = (direction) => {
   const currentIndex = colorOrder.indexOf(activeColor);
   const nextIndex = (currentIndex + direction + colorOrder.length) % colorOrder.length;
   selectColor(colorOrder[nextIndex]);
+};
+
+const setCarouselImage = (index) => {
+  if (!carouselImages.length) return;
+
+  activeCarouselImage = (index + carouselImages.length) % carouselImages.length;
+  carouselImages.forEach((image, imageIndex) => {
+    image.classList.toggle("is-active", imageIndex === activeCarouselImage);
+  });
 };
 
 setHeaderState();
@@ -79,6 +86,14 @@ blueDot?.addEventListener("click", () => {
 
 leftArrow?.addEventListener("click", () => moveColor(-1));
 rightArrow?.addEventListener("click", () => moveColor(1));
+
+carouselPrev?.addEventListener("click", () => {
+  setCarouselImage(activeCarouselImage - 1);
+});
+
+carouselNext?.addEventListener("click", () => {
+  setCarouselImage(activeCarouselImage + 1);
+});
 
 stepOverlays.forEach((overlay) => {
   overlay.addEventListener("click", () => {
