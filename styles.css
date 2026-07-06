@@ -407,7 +407,7 @@ img {
   height: 62%;
   content: "";
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.48) 54%, rgba(0, 0, 0, 0) 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 48%, 78% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 58%, 84% 100%, 0 100%);
   opacity: 0;
   transform: translateY(40%);
   pointer-events: none;
@@ -423,7 +423,7 @@ img {
 
 .step-text {
   position: absolute;
-  left: 5.35vw;
+  left: 4.25vw;
   bottom: 2.2vw;
   z-index: 2;
   display: flex;
@@ -433,6 +433,7 @@ img {
   transform: translateY(1.15vw);
   transition: opacity 240ms ease, transform 280ms ease;
   pointer-events: none;
+  max-width: 16.4vw;
 }
 
 .step-overlay:hover .step-text,
@@ -454,7 +455,7 @@ img {
   margin-top: 0.42vw;
   color: #fff;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 1.18vw;
+  font-size: 1.08vw;
   font-weight: 500;
   line-height: 1.1;
 }
