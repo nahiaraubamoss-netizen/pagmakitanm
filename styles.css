@@ -75,8 +75,8 @@ img {
 }
 
 .is-scrolled .fixed-header-strip {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .is-scrolled .desktop-nav {
@@ -86,13 +86,24 @@ img {
 
 .desktop-nav::before {
   position: absolute;
-  top: -0.52vw;
+  top: -0.9vw;
   left: 39.95vw;
   z-index: -1;
   width: 49vw;
-  height: 2.38vw;
+  height: 3.05vw;
   content: "";
-  background: #05090b;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  opacity: 0;
+  transition: opacity 140ms ease, background 140ms ease, backdrop-filter 140ms ease;
+}
+
+.is-scrolled .desktop-nav::before {
+  background: rgba(5, 9, 11, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 1;
 }
 
 .desktop-nav a {
@@ -141,8 +152,6 @@ img {
   left: 76.9vw;
   width: 8.55vw;
   --underline-extra: 0.22vw;
-  background: #05090b;
-  box-shadow: 0 0 0 0.62vw #05090b;
 }
 
 .desktop-nav a:hover,
