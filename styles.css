@@ -389,37 +389,39 @@ img {
 }
 
 .step-overlay {
-  --step-card-clip: polygon(18% 0, 100% 0, 100% 57%, 86.5% 100%, 0 100%, 0 20%);
   position: absolute;
   z-index: 4;
-  overflow: hidden;
-  clip-path: var(--step-card-clip);
   padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
 }
 
-.step-overlay::before {
+.step-card-frame {
   position: absolute;
   inset: 0;
+  display: block;
+  overflow: hidden;
+  clip-path: polygon(18% 0, 100% 0, 100% 57%, 86.5% 100%, 0 100%, 0 20%);
+  pointer-events: none;
+}
+
+.step-degradado {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
-  content: "";
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.5) 36%, rgba(0, 0, 0, 0) 72%);
-  clip-path: var(--step-card-clip);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.5) 38%, rgba(0, 0, 0, 0) 100%);
   opacity: 0;
-  transform: translateY(40%);
-  pointer-events: none;
-  transition: opacity 260ms ease, transform 300ms ease;
+  transition: opacity 300ms ease;
 }
 
-.step-overlay:hover::before,
-.step-overlay:focus-visible::before,
-.step-overlay.is-active::before {
+.step-overlay:hover .step-degradado,
+.step-overlay:focus-visible .step-degradado,
+.step-overlay.is-active .step-degradado {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .step-text {
