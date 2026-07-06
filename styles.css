@@ -303,8 +303,8 @@ img {
 .terrain-trigger {
   position: absolute;
   z-index: 5;
-  width: 3.9vw;
-  height: 3.9vw;
+  width: 6vw;
+  height: 6vw;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -313,24 +313,24 @@ img {
 }
 
 .terrain-trigger-one {
-  top: 82.95vw;
-  left: 49.25vw;
+  top: 81.9vw;
+  left: 48.2vw;
 }
 
 .terrain-trigger-two {
-  top: 90.25vw;
-  left: 46.6vw;
+  top: 89.2vw;
+  left: 45.55vw;
 }
 
 .terrain-trigger-three {
-  top: 108.65vw;
-  left: 53.55vw;
+  top: 107.6vw;
+  left: 52.5vw;
   z-index: 6;
 }
 
 .terrain-trigger-four {
-  top: 111.0vw;
-  left: 43.55vw;
+  top: 109.95vw;
+  left: 42.5vw;
 }
 
 .step-number-svg {
