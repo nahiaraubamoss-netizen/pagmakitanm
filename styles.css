@@ -347,22 +347,27 @@ img {
 }
 
 .step-number-svg {
-  display: none;
+  position: absolute;
+  z-index: 7;
+  display: block;
+  width: 3.9vw;
+  height: 3.9vw;
+  pointer-events: none;
 }
 
 .step-number-one {
-  top: 242.12vw;
-  left: 28.05vw;
+  top: 241.45vw;
+  left: 12.85vw;
 }
 
 .step-number-two {
-  top: 242.0vw;
-  left: 54.55vw;
+  top: 241.45vw;
+  left: 40.35vw;
 }
 
 .step-number-three {
-  top: 242.04vw;
-  left: 81.16vw;
+  top: 241.45vw;
+  left: 67.72vw;
 }
 
 .step-number-svg circle {
@@ -407,6 +412,7 @@ img {
   height: 62%;
   content: "";
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.48) 54%, rgba(0, 0, 0, 0) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 88% 100%, 0 100%);
   opacity: 0;
   transform: translateY(40%);
   pointer-events: none;
@@ -422,8 +428,8 @@ img {
 
 .step-text {
   position: absolute;
-  left: 2.0vw;
-  bottom: 2.55vw;
+  left: 5.35vw;
+  bottom: 2.2vw;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -442,7 +448,7 @@ img {
 }
 
 .step-title {
-  color: #fff;
+  color: #6ed8ff;
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 3.05vw;
   font-weight: 400;
@@ -451,7 +457,7 @@ img {
 
 .step-subtitle {
   margin-top: 0.42vw;
-  color: #8be8ff;
+  color: #fff;
   font-family: "Space Grotesk", Arial, sans-serif;
   font-size: 1.18vw;
   font-weight: 500;
