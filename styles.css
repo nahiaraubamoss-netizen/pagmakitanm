@@ -34,7 +34,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  min-height: calc(100vw * 10409.24 / 1920);
+  min-height: calc(100vw * 10398.6 / 1920);
   margin-bottom: 0;
   background: var(--black);
   overflow: hidden;
@@ -45,7 +45,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100vw;
-  min-height: calc(100vw * 10409.24 / 1920);
+  min-height: calc(100vw * 10398.6 / 1920);
 }
 
 .desktop-page::after {
@@ -271,7 +271,7 @@ img {
   position: absolute;
   inset: 0;
   content: "";
-  background-image: url("assets/desktop-design-preentrega-v2.jpg");
+  background-image: url("assets/desktop-design-entrega.jpg");
   background-repeat: no-repeat;
   background-size: 100vw auto;
   opacity: 0;
