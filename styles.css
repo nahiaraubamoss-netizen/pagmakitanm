@@ -56,6 +56,20 @@ img {
   display: none;
 }
 
+.header-logo {
+  position: absolute;
+  top: 1.52vw;
+  left: 11.75vw;
+  z-index: 22;
+  width: 10.25vw;
+  height: auto;
+  pointer-events: none;
+}
+
+.is-scrolled .header-logo {
+  position: fixed;
+}
+
 .desktop-nav {
   position: absolute;
   top: 2.75vw;
