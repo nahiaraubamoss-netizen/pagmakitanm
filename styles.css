@@ -53,16 +53,7 @@ img {
 }
 
 .fixed-header-strip {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 19;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 120ms ease;
-  visibility: hidden;
+  display: none;
 }
 
 .desktop-nav {
@@ -85,25 +76,24 @@ img {
 }
 
 .desktop-nav::before {
-  position: absolute;
-  top: -0.9vw;
-  left: 39.95vw;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
-  width: 49vw;
-  height: 3.05vw;
+  width: 100vw;
+  height: 6.15vw;
   content: "";
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  opacity: 0;
-  transition: opacity 140ms ease, background 140ms ease, backdrop-filter 140ms ease;
+  background: rgba(5, 9, 11, 0.38);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 1;
+  transition: background 140ms ease, backdrop-filter 140ms ease;
 }
 
 .is-scrolled .desktop-nav::before {
-  background: rgba(5, 9, 11, 0.28);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  opacity: 1;
+  background: rgba(5, 9, 11, 0.46);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .desktop-nav a {
