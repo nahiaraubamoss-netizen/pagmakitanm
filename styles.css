@@ -771,6 +771,35 @@ img {
   transform: translateY(-0.08vw);
 }
 
+.work-subtitle-clean {
+  position: absolute;
+  top: 362.9vw;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 0.45vw 0 0.75vw;
+  color: #fff;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.92vw;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 0 0.12vw rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.work-subtitle-clean::before {
+  position: absolute;
+  top: -0.25vw;
+  left: 19.5vw;
+  z-index: -1;
+  width: 61vw;
+  height: 3.6vw;
+  content: "";
+  background:
+    radial-gradient(ellipse at center, rgba(5, 28, 31, 0.96) 0%, rgba(5, 28, 31, 0.88) 48%, rgba(5, 28, 31, 0) 78%);
+}
+
 .color-swap {
   position: absolute;
   top: 373.4vw;
