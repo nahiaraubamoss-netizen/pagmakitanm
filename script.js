@@ -4,6 +4,14 @@ const root = document.documentElement;
 const header = document.querySelector(".site-header");
 let currentScale = 1;
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+if (window.location.hash) {
+  history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+}
+window.scrollTo(0, 0);
+
 const sizeArtboard = () => {
   const designWidth = window.matchMedia("(max-width: 600px)").matches ? MOBILE_WIDTH : DESKTOP_WIDTH;
   currentScale = window.innerWidth / designWidth;
@@ -21,6 +29,10 @@ const pinHeader = () => {
 sizeArtboard();
 window.addEventListener("resize", sizeArtboard, { passive: true });
 window.addEventListener("scroll", pinHeader, { passive: true });
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+  pinHeader();
+});
 
 const revealElements = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver((entries) => {
@@ -37,11 +49,13 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
 menuButton?.addEventListener("click", () => {
   const open = navigation?.classList.toggle("is-open");
+  menuButton.classList.toggle("is-open", Boolean(open));
   menuButton.setAttribute("aria-expanded", String(Boolean(open)));
 });
 
 document.querySelectorAll(".site-nav a").forEach((link) => link.addEventListener("click", () => {
   navigation?.classList.remove("is-open");
+  menuButton?.classList.remove("is-open");
   menuButton?.setAttribute("aria-expanded", "false");
 }));
 
@@ -51,9 +65,15 @@ const setFeature = (name) => {
 const clearFeature = () => {
   document.querySelectorAll("[data-feature]").forEach((element) => element.classList.remove("is-active"));
 };
+const isMobileView = () => window.matchMedia("(max-width: 600px)").matches;
 document.querySelectorAll(".pin").forEach((pin) => {
   ["mouseenter", "focus", "click"].forEach((eventName) => pin.addEventListener(eventName, () => setFeature(pin.dataset.feature)));
-  ["mouseleave", "blur"].forEach((eventName) => pin.addEventListener(eventName, clearFeature));
+  ["mouseleave", "blur"].forEach((eventName) => pin.addEventListener(eventName, () => {
+    if (!isMobileView()) clearFeature();
+  }));
+});
+document.querySelectorAll(".part").forEach((part) => {
+  part.addEventListener("click", () => setFeature(part.dataset.feature));
 });
 
 const setupSlider = (slider) => {

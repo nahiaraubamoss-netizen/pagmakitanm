@@ -20,9 +20,16 @@
   .site-header{width:414px;height:44px;padding:16px 20px 0;background:transparent}
   .site-header.is-scrolled{background:rgb(0 0 0/.62);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
   .brand{width:54px}
-  .site-nav{display:none}
-  .menu-toggle{display:block;position:absolute;right:21px;top:15px;width:18px;height:14px;padding:0;border:0;background:transparent}
-  .menu-toggle span{display:block;width:18px;height:2px;margin:0 0 4px;background:#fff}
+  .site-nav{position:absolute;z-index:32;top:0;left:4px;display:flex;width:386px;height:760px;padding:150px 0 0 64px;flex-direction:column;gap:48px;border:3px solid #3091a9;background:rgb(48 145 169/.78);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%,0 8%);opacity:0;visibility:hidden;pointer-events:none;transform:translateX(24px);transition:opacity .22s ease,visibility .22s ease,transform .22s ease}
+  .site-nav.is-open{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(0)}
+  .site-nav a{font:600 34px/1 var(--display);letter-spacing:.01em}
+  .menu-toggle{display:block;position:absolute;z-index:35;right:21px;top:15px;width:18px;height:14px;padding:0;border:0;background:transparent}
+  .menu-toggle span{display:block;width:18px;height:2px;margin:0 0 4px;background:#fff;transition:transform .2s ease,opacity .2s ease,width .2s ease}
+  .menu-toggle.is-open{right:127px;top:47px;width:28px;height:28px}
+  .menu-toggle.is-open span{position:absolute;top:13px;left:1px;width:28px;margin:0}
+  .menu-toggle.is-open span:nth-child(1){transform:rotate(45deg)}
+  .menu-toggle.is-open span:nth-child(2){opacity:0}
+  .menu-toggle.is-open span:nth-child(3){transform:rotate(-45deg)}
   .hero{width:414px;height:790px}
   .hero-copy{left:48px;top:83px;width:318px;text-align:center}
   .kicker{margin:0 0 10px;font:400 10px/1 var(--body)}
@@ -40,10 +47,12 @@
   .anatomy-product>img{width:180px;height:249px}
   .pin{width:26px;height:26px;font:600 18px/26px var(--display)}
   .pin-1{top:9px;left:104px}.pin-2{top:79px;left:66px}.pin-3{top:156px;left:132px}.pin-4{top:184px;left:40px}
-  .part{opacity:1;visibility:visible;transform:none;display:flex;align-items:flex-start;width:290px;min-height:48px;padding:8px 10px;border:2px solid var(--cyan);background:rgb(48 145 169/.35);gap:9px}
+  .part{opacity:1;visibility:visible;pointer-events:auto;transform:none;display:flex;align-items:flex-start;width:290px;min-height:48px;padding:8px 10px;border:2px solid var(--cyan);background:rgb(48 145 169/.35);gap:9px;cursor:pointer}
   .part b{width:24px;height:24px;font:600 17px/24px var(--display)}
   .part h3{margin:0 0 3px;font:600 14px/1 var(--display)}
-  .part p{font:300 8px/11px var(--body)}
+  .part p{max-height:0;margin:0;overflow:hidden;opacity:0;font:300 8px/11px var(--body);transition:max-height .2s ease,opacity .2s ease}
+  .part.is-active{transform:none}
+  .part.is-active p{max-height:34px;opacity:1}
   .part-deposito{left:62px;top:410px}.part-baterias{left:62px;top:548px}.part-manija{left:62px;top:350px}.part-taza{left:62px;top:479px}
   .details{top:2155px;width:414px;height:770px}
   .details>.section-title{top:0}
@@ -61,7 +70,9 @@
   .steps{top:3040px;width:414px;height:1110px}
   .step-grid{top:110px;left:92px;width:230px;display:flex;flex-direction:column;gap:42px}
   .step-grid article:nth-child(1),.step-grid article:nth-child(2),.step-grid article:nth-child(3){width:230px;height:231px}
+  .step-base{opacity:0}
   .step-hover{height:100%;object-fit:cover}
+  .step-grid article .step-hover{opacity:1}
   .action{top:4140px;width:414px;height:450px}
   .action-slider{top:85px;width:414px;height:260px}
   .action-slider .slide{width:414px;height:190px;object-fit:cover}
