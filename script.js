@@ -1,11 +1,12 @@
 const DESKTOP_WIDTH = 1920;
-const DESIGN_HEIGHT = 10459;
+const MOBILE_WIDTH = 414;
 const root = document.documentElement;
 const header = document.querySelector(".site-header");
 let currentScale = 1;
 
 const sizeArtboard = () => {
-  currentScale = window.innerWidth / DESKTOP_WIDTH;
+  const designWidth = window.matchMedia("(max-width: 600px)").matches ? MOBILE_WIDTH : DESKTOP_WIDTH;
+  currentScale = window.innerWidth / designWidth;
   root.style.setProperty("--scale", String(currentScale));
   pinHeader();
 };
