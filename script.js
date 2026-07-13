@@ -1,154 +1,123 @@
-const colorSwap = document.querySelector(".color-swap");
-const greenDot = document.querySelector(".color-dot-green");
-const redDot = document.querySelector(".color-dot-red");
-const blueDot = document.querySelector(".color-dot-blue");
-const leftArrow = document.querySelector(".color-arrow-left");
-const rightArrow = document.querySelector(".color-arrow-right");
-const colorName = document.querySelector(".color-name");
-const colorDots = [blueDot, redDot, greenDot];
-const colorOrder = ["blue", "red", "green"];
-const colorLabels = {
+const navToggle = document.querySelector(".nav-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+navToggle?.addEventListener("click", () => {
+  const isOpen = mainNav?.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+});
+
+mainNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("is-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
+const terrainButtons = document.querySelectorAll("[data-target]");
+const terrainItems = document.querySelectorAll(".terrain-item");
+
+const setTerrainFeature = (feature) => {
+  terrainItems.forEach((item) => {
+    item.classList.toggle("is-active", item.querySelector(`[data-target="${feature}"]`) !== null);
+  });
+
+  document.querySelectorAll(".terrain-copy").forEach((copy) => {
+    copy.classList.toggle("is-active", copy.id === `terrain-${feature}`);
+  });
+};
+
+terrainButtons.forEach((button) => {
+  button.addEventListener("pointerenter", () => setTerrainFeature(button.dataset.target));
+  button.addEventListener("focus", () => setTerrainFeature(button.dataset.target));
+  button.addEventListener("click", () => setTerrainFeature(button.dataset.target));
+});
+
+setTerrainFeature("manija");
+
+const createCarousel = ({ slidesSelector, dotsContainerSelector, previousSelector, nextSelector }) => {
+  const slides = Array.from(document.querySelectorAll(slidesSelector));
+  const dotsContainer = document.querySelector(dotsContainerSelector);
+  const previous = document.querySelector(previousSelector);
+  const next = document.querySelector(nextSelector);
+
+  if (!slides.length || !dotsContainer) return;
+
+  let activeIndex = 0;
+
+  const dots = slides.map((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Ir a la diapositiva ${index + 1}`);
+    dot.addEventListener("click", () => setSlide(index));
+    dotsContainer.append(dot);
+    return dot;
+  });
+
+  const setSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === activeIndex);
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeIndex);
+    });
+  };
+
+  previous?.addEventListener("click", () => setSlide(activeIndex - 1));
+  next?.addEventListener("click", () => setSlide(activeIndex + 1));
+
+  setSlide(0);
+};
+
+createCarousel({
+  slidesSelector: ".action-slide",
+  dotsContainerSelector: ".action-dots",
+  previousSelector: ".carousel-prev",
+  nextSelector: ".carousel-next",
+});
+
+createCarousel({
+  slidesSelector: ".review-slide",
+  dotsContainerSelector: ".review-dots",
+  previousSelector: ".review-prev",
+  nextSelector: ".review-next",
+});
+
+const colorPicker = document.querySelector(".color-picker");
+const colorDots = Array.from(document.querySelectorAll(".color-dot"));
+const colorArrows = Array.from(document.querySelectorAll(".color-arrow"));
+const colorLabel = document.querySelector(".color-label");
+const colors = ["blue", "red", "green"];
+const labels = {
   blue: "Celeste cielo",
   red: "Rojo óxido",
   green: "Verde oscuro",
 };
 let activeColor = "red";
-const stepOverlays = document.querySelectorAll(".step-overlay");
-const carouselImages = document.querySelectorAll(".action-carousel-image");
-const carouselPrev = document.querySelector(".action-carousel-prev");
-const carouselNext = document.querySelector(".action-carousel-next");
-let activeCarouselImage = 0;
-const reviewSlides = document.querySelectorAll(".review-slide");
-const reviewDots = document.querySelectorAll(".review-dot");
-const reviewPrev = document.querySelector(".review-prev");
-const reviewNext = document.querySelector(".review-next");
-let activeReview = 0;
-const terrainTriggers = document.querySelectorAll(".terrain-trigger");
-const terrainInfos = {
-  battery: document.querySelector(".battery-hover"),
-  deposit: document.querySelector(".deposit-hover"),
-  steel: document.querySelector(".steel-hover"),
-  transport: document.querySelector(".transport-hover"),
-};
 
-const setHeaderState = () => {
-  document.body.classList.toggle("is-scrolled", window.scrollY > 12);
-};
-
-const setActiveDot = (dot) => {
-  colorDots.forEach((item) => item?.classList.toggle("is-active", item === dot));
-};
-
-const selectColor = (color) => {
-  if (!colorSwap) return;
-
+const setColor = (color) => {
   activeColor = color;
-  colorSwap.classList.toggle("is-blue-active", color === "blue");
-  colorSwap.classList.toggle("is-red-active", color === "red");
-  colorSwap.classList.toggle("is-green-active", color === "green");
-
-  const activeDot = {
-    blue: blueDot,
-    red: redDot,
-    green: greenDot,
-  }[color];
-  setActiveDot(activeDot);
-  if (colorName) {
-    colorName.textContent = colorLabels[color];
+  colorPicker?.setAttribute("data-active", color);
+  colorDots.forEach((dot) => {
+    dot.classList.toggle("is-active", dot.dataset.color === color);
+  });
+  if (colorLabel) {
+    colorLabel.textContent = labels[color];
   }
 };
 
 const moveColor = (direction) => {
-  const currentIndex = colorOrder.indexOf(activeColor);
-  const nextIndex = (currentIndex + direction + colorOrder.length) % colorOrder.length;
-  selectColor(colorOrder[nextIndex]);
+  const currentIndex = colors.indexOf(activeColor);
+  const nextIndex = (currentIndex + direction + colors.length) % colors.length;
+  setColor(colors[nextIndex]);
 };
 
-const setCarouselImage = (index) => {
-  if (!carouselImages.length) return;
-
-  activeCarouselImage = (index + carouselImages.length) % carouselImages.length;
-  carouselImages.forEach((image, imageIndex) => {
-    image.classList.toggle("is-active", imageIndex === activeCarouselImage);
-  });
-};
-
-const setReview = (index) => {
-  if (!reviewSlides.length) return;
-
-  activeReview = (index + reviewSlides.length) % reviewSlides.length;
-  reviewSlides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("is-active", slideIndex === activeReview);
-  });
-  reviewDots.forEach((dot, dotIndex) => {
-    dot.classList.toggle("is-active", dotIndex === activeReview);
-  });
-};
-
-setHeaderState();
-selectColor("red");
-window.addEventListener("scroll", setHeaderState, { passive: true });
-
-greenDot?.addEventListener("click", () => {
-  selectColor("green");
+colorDots.forEach((dot) => {
+  dot.addEventListener("click", () => setColor(dot.dataset.color));
 });
 
-redDot?.addEventListener("click", () => {
-  selectColor("red");
+colorArrows.forEach((arrow) => {
+  arrow.addEventListener("click", () => moveColor(Number(arrow.dataset.direction)));
 });
 
-blueDot?.addEventListener("click", () => {
-  selectColor("blue");
-});
-
-leftArrow?.addEventListener("click", () => moveColor(-1));
-rightArrow?.addEventListener("click", () => moveColor(1));
-
-carouselPrev?.addEventListener("click", () => {
-  setCarouselImage(activeCarouselImage - 1);
-});
-
-carouselNext?.addEventListener("click", () => {
-  setCarouselImage(activeCarouselImage + 1);
-});
-
-reviewPrev?.addEventListener("click", () => {
-  setReview(activeReview - 1);
-});
-
-reviewNext?.addEventListener("click", () => {
-  setReview(activeReview + 1);
-});
-
-reviewDots.forEach((dot, dotIndex) => {
-  dot.addEventListener("click", () => {
-    setReview(dotIndex);
-  });
-});
-
-stepOverlays.forEach((overlay) => {
-  overlay.addEventListener("click", () => {
-    stepOverlays.forEach((item) => item.classList.toggle("is-active", item === overlay && !overlay.classList.contains("is-active")));
-  });
-});
-
-terrainTriggers.forEach((trigger) => {
-  const info = terrainInfos[trigger.dataset.feature];
-
-  const showInfo = () => {
-    info?.classList.add("is-hovered");
-  };
-
-  trigger.addEventListener("pointerenter", showInfo);
-  trigger.addEventListener("pointerdown", showInfo);
-
-  trigger.addEventListener("pointerleave", () => {
-    info?.classList.remove("is-hovered");
-  });
-
-  trigger.addEventListener("click", () => {
-    const wasActive = info?.classList.contains("is-active");
-    Object.values(terrainInfos).forEach((item) => item?.classList.remove("is-active"));
-    info?.classList.toggle("is-active", !wasActive);
-  });
-});
+setColor(activeColor);

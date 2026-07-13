@@ -3,160 +3,316 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Makita DCM501</title>
+    <title>Makita DCM501 | Cafetera a batería</title>
+    <meta
+      name="description"
+      content="Landing page de producto para la cafetera a batería Makita DCM501."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="desktop-page" aria-label="Pagina Makita DCM501 version computadora">
-      <div class="desktop-content">
-      <img class="fixed-header-strip" src="assets/header-fixed-entrega.webp" alt="" aria-hidden="true" />
-      <img class="header-logo" src="assets/makita-logo-white.png" alt="Makita" />
-      <nav class="desktop-nav" aria-label="Navegacion principal">
-        <a href="#">INICIO</a>
-        <a href="#">CARÁCTERISTICAS</a>
-        <a href="#">FUNCIONES</a>
-        <a href="#">COMPLEMENTOS</a>
-        <a href="#">CONTACTO</a>
+    <header class="site-header" id="inicio">
+      <a class="brand" href="#inicio" aria-label="Makita inicio">
+        <img src="assets/makita-logo-white.png" alt="Makita" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">INICIO</a>
+        <a href="#caracteristicas">CARACTERÍSTICAS</a>
+        <a href="#funciones">FUNCIONES</a>
+        <a href="#complementos">COMPLEMENTOS</a>
+        <a href="#contacto">CONTACTO</a>
       </nav>
-      <div class="transport-mask" aria-hidden="true"></div>
-      <div class="transport-hover terrain-info" aria-label="Manija de transporte">
-        <span>Práctica y plegable para trasladar<br />la cafetera con facilidad.</span>
-      </div>
-      <div class="deposit-mask" aria-hidden="true"></div>
-      <div class="deposit-hover feature-hover terrain-info" aria-label="Tapa de depósito">
-        <span>Protege el compartimento<br />del agua y se pliega fácilmente.</span>
-      </div>
-      <div class="battery-mask" aria-hidden="true"></div>
-      <div class="battery-hover feature-hover terrain-info" aria-label="Porta baterías">
-        <span>Compatible con baterías<br />de 12Vmax o 18V.</span>
-      </div>
-      <div class="steel-mask" aria-hidden="true"></div>
-      <div class="steel-hover feature-hover terrain-info" aria-label="Taza de acero">
-        <span>Térmica e inoxidable, encaja en la<br />máquina evitando derrames.</span>
-      </div>
-      <button class="terrain-trigger terrain-trigger-one" type="button" data-feature="transport" aria-label="Mostrar manija de transporte"></button>
-      <button class="terrain-trigger terrain-trigger-two" type="button" data-feature="deposit" aria-label="Mostrar tapa de depósito"></button>
-      <button class="terrain-trigger terrain-trigger-three" type="button" data-feature="steel" aria-label="Mostrar taza de acero"></button>
-      <button class="terrain-trigger terrain-trigger-four" type="button" data-feature="battery" aria-label="Mostrar porta baterías"></button>
-      <svg class="step-number-svg step-number-one" viewBox="214.62 6406.24 46.74 46.74" aria-hidden="true">
-        <circle cx="237.99" cy="6429.61" r="23.37" />
-        <path d="M238.08,6422.91h-4.19v-2.84c1.14,0,2.06-.1,2.75-.29.69-.19,1.24-.52,1.66-.97.41-.45.78-1.1,1.09-1.95h2.69v25.49h-4.01v-19.45Z" />
-      </svg>
-      <svg class="step-number-svg step-number-two" viewBox="771.93 6406 46.74 46.74" aria-hidden="true">
-        <circle cx="795.3" cy="6429.37" r="23.37" />
-        <path d="M789.33,6439.53c0-1.82.29-3.38.87-4.68.58-1.3,1.63-2.74,3.13-4.32,1.48-1.58,2.51-2.93,3.08-4.04.57-1.12.86-2.28.86-3.5,0-1.09-.18-1.85-.53-2.28-.35-.42-.87-.64-1.55-.64-1.38,0-2.08.84-2.08,2.51v2.73h-3.79v-2.48c0-2.06.51-3.65,1.53-4.75,1.02-1.1,2.5-1.66,4.44-1.66s3.42.55,4.44,1.66c1.02,1.1,1.53,2.69,1.53,4.75,0,1.55-.37,3.07-1.11,4.55-.74,1.48-2.02,3.18-3.84,5.1-1.19,1.26-1.99,2.29-2.4,3.08-.41.79-.62,1.63-.62,2.53v.55h7.61v3.64h-11.58v-2.77Z" />
-      </svg>
-      <svg class="step-number-svg step-number-three" viewBox="1309.86 6406.24 46.74 46.74" aria-hidden="true">
-        <circle cx="1333.23" cy="6429.61" r="23.37" />
-        <path d="M1328.77,6441.08c-1.01-1.09-1.51-2.66-1.51-4.7v-2.08h3.79v2.26c0,1.68.69,2.51,2.08,2.51.68,0,1.2-.21,1.55-.64.35-.42.53-1.17.53-2.24v-2.08c0-1.17-.21-2-.62-2.49-.41-.5-1.08-.75-2-.75h-1.35v-3.64h1.46c.8,0,1.4-.21,1.8-.62.4-.41.6-1.1.6-2.08v-1.86c0-.87-.18-1.52-.55-1.93-.36-.41-.85-.62-1.46-.62-1.29,0-1.93.79-1.93,2.37v1.68h-3.79v-1.35c0-2.04.5-3.61,1.51-4.7,1.01-1.09,2.46-1.64,4.35-1.64s3.37.54,4.37,1.62c1,1.08,1.49,2.64,1.49,4.68v.91c0,1.38-.23,2.49-.69,3.33-.46.84-1.18,1.44-2.15,1.8v.07c1.04.39,1.8,1.02,2.26,1.89.46.87.69,1.99.69,3.35v2.26c0,2.04-.5,3.6-1.51,4.68-1.01,1.08-2.49,1.62-4.46,1.62s-3.45-.55-4.46-1.64Z" />
-      </svg>
-      <button class="step-overlay step-overlay-one" type="button" aria-label="Llenar">
-        <span class="step-card-frame">
-          <span class="step-degradado"></span>
-          <span class="step-text">
-            <span class="step-title">LLENAR</span>
-            <span class="step-subtitle">El tanque con agua</span>
-          </span>
-        </span>
-      </button>
-      <button class="step-overlay step-overlay-two" type="button" aria-label="Agregar">
-        <span class="step-card-frame">
-          <span class="step-degradado"></span>
-          <span class="step-text">
-            <span class="step-title">AGREGAR</span>
-            <span class="step-subtitle">El café molido o cápsula</span>
-          </span>
-        </span>
-      </button>
-      <button class="step-overlay step-overlay-three" type="button" aria-label="Disfrutar">
-        <span class="step-card-frame">
-          <span class="step-degradado"></span>
-          <span class="step-text">
-            <span class="step-title">DISFRUTAR</span>
-            <span class="step-subtitle">Del café en cualquier lugar</span>
-          </span>
-        </span>
-      </button>
-      <div class="steps-texture" aria-hidden="true"></div>
-      <div class="action-carousel-backdrop" aria-hidden="true"></div>
-      <section class="action-carousel" aria-label="Carrusel de uso de la cafetera">
-        <img class="action-carousel-image is-active" src="assets/action-carousel-1.jpg" alt="" />
-        <img class="action-carousel-image" src="assets/action-carousel-2.jpg" alt="" />
-        <img class="action-carousel-image" src="assets/action-carousel-3.jpg" alt="" />
-        <img class="action-carousel-image" src="assets/action-carousel-4.jpg" alt="" />
-        <img class="action-carousel-image" src="assets/action-carousel-5.jpg" alt="" />
-        <img class="action-carousel-image" src="assets/action-carousel-6.jpg" alt="" />
-        <div class="action-carousel-copy">
-          <span>LISTA PARA LA ACCIÓN</span>
-          <p>Rendimiento inalámbrico de alta resistencia, pensado especialmente para acompañarte en cada lugar.</p>
+    </header>
+
+    <main>
+      <section class="hero section-dark" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">MODELO DCM501</p>
+            <h1 id="hero-title">
+              <span>TU CAFÉ LISTO</span>
+              DONDE ESTES
+            </h1>
+            <p>
+              Cafetera a batería, diseñada para resistir las jornadas más exigentes, en cualquier entorno.
+            </p>
+          </div>
+
+          <figure class="hero-product" aria-label="Cafetera Makita DCM501 color celeste">
+            <img src="assets/product-blue-trim.webp" alt="Cafetera a batería Makita DCM501" />
+          </figure>
         </div>
-        <button class="action-carousel-arrow action-carousel-prev" type="button" aria-label="Imagen anterior"></button>
-        <button class="action-carousel-arrow action-carousel-next" type="button" aria-label="Imagen siguiente"></button>
+        <a class="hero-chevron" href="#caracteristicas" aria-label="Bajar a características"></a>
       </section>
-      <section class="ticker-banner" aria-label="Práctica portátil antigolpes">
-        <div class="ticker-track" aria-hidden="true">
-          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
-          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
-          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
-          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
+
+      <section class="feature-strip" aria-label="Beneficios principales">
+        <div class="container feature-grid">
+          <article class="feature-pill">
+            <span class="feature-icon feature-icon-battery" aria-hidden="true"></span>
+            <div>
+              <h2>PODER INALÁMBRICO</h2>
+              <p>Sin cables, ni extensores</p>
+            </div>
+          </article>
+          <article class="feature-pill">
+            <span class="feature-icon feature-icon-shield" aria-hidden="true"></span>
+            <div>
+              <h2>RESISTENCIA EXTREMA</h2>
+              <p>Soporta todos los golpes</p>
+            </div>
+          </article>
+          <article class="feature-pill">
+            <span class="feature-icon feature-icon-filter" aria-hidden="true"></span>
+            <div>
+              <h2>FILTRO PERMANENTE</h2>
+              <p>Sin filtros de papel</p>
+            </div>
+          </article>
         </div>
       </section>
-      <section class="review-carousel" aria-label="Carrusel de reseñas">
-        <img class="review-slide is-active" src="assets/review-slide-1.png" alt="" />
-        <img class="review-slide" src="assets/review-slide-2.png" alt="" />
-        <img class="review-slide" src="assets/review-slide-3.png" alt="" />
-        <img class="review-slide" src="assets/review-slide-4.png" alt="" />
-        <button class="review-arrow review-prev" type="button" aria-label="Reseña anterior"></button>
-        <button class="review-arrow review-next" type="button" aria-label="Reseña siguiente"></button>
-        <div class="review-dots" aria-label="Seleccionar reseña">
-          <button class="review-dot is-active" type="button" aria-label="Reseña 1"></button>
-          <button class="review-dot" type="button" aria-label="Reseña 2"></button>
-          <button class="review-dot" type="button" aria-label="Reseña 3"></button>
-          <button class="review-dot" type="button" aria-label="Reseña 4"></button>
+
+      <section class="terrain section-black" id="caracteristicas" aria-labelledby="terrain-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="terrain-title">ANATOMÍA DE ALTO RENDIMIENTO</h2>
+            <p>Construcción compacta y optimizada para el profesional exigente</p>
+          </div>
+
+          <div class="terrain-layout">
+            <article class="terrain-item terrain-item-left-top">
+              <button class="terrain-dot" type="button" data-target="deposito">2</button>
+              <div class="terrain-copy" id="terrain-deposito">
+                <h3>TAPA DE DEPÓSITO:</h3>
+                <p>Se abre fácilmente, protegiendo el compartimento del agua.</p>
+              </div>
+            </article>
+
+            <article class="terrain-item terrain-item-left-bottom">
+              <button class="terrain-dot" type="button" data-target="bateria">4</button>
+              <div class="terrain-copy" id="terrain-bateria">
+                <h3>PORTA BATERÍAS:</h3>
+                <p>Máxima versatilidad, compatible con baterías de 18V y 12V.</p>
+              </div>
+            </article>
+
+            <figure class="terrain-product">
+              <img src="assets/product-blue-trim.webp" alt="Vista de la cafetera Makita con detalles numerados" />
+              <button class="terrain-hotspot hotspot-one" type="button" data-target="manija">1</button>
+              <button class="terrain-hotspot hotspot-two" type="button" data-target="deposito">2</button>
+              <button class="terrain-hotspot hotspot-three" type="button" data-target="taza">3</button>
+              <button class="terrain-hotspot hotspot-four" type="button" data-target="bateria">4</button>
+            </figure>
+
+            <article class="terrain-item terrain-item-right-top">
+              <button class="terrain-dot" type="button" data-target="manija">1</button>
+              <div class="terrain-copy" id="terrain-manija">
+                <h3>MANIJA DE TRANSPORTE:</h3>
+                <p>Plegable, con alto poder trasladar la cafetera con facilidad.</p>
+              </div>
+            </article>
+
+            <article class="terrain-item terrain-item-right-bottom">
+              <button class="terrain-dot" type="button" data-target="taza">3</button>
+              <div class="terrain-copy" id="terrain-taza">
+                <h3>TAZA DE ACERO TÉRMICA:</h3>
+                <p>Inoxidable, diseñada para encajar en la máquina evitando derrames.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
-      <div class="work-subtitle-clean" aria-hidden="true">Mismo rendimiento extremo, ahora en tres variantes de color.</div>
-      <section class="color-swap" aria-label="Selector de color">
-        <img class="color-product color-product-blue" src="assets/product-blue-trim.webp" alt="" />
-        <img class="color-product color-product-red" src="assets/product-red-trim.webp" alt="" />
-        <img class="color-product color-product-green" src="assets/product-green-trim.webp" alt="" />
-        <div class="color-dots-cover" aria-hidden="true"></div>
-        <button class="color-arrow color-arrow-left" type="button" aria-label="Color anterior"></button>
-        <button class="color-dot color-dot-blue" type="button" aria-label="Color azul"></button>
-        <button class="color-dot color-dot-red" type="button" aria-label="Color rojo"></button>
-        <button class="color-dot color-dot-green" type="button" aria-label="Color verde"></button>
-        <button class="color-arrow color-arrow-right" type="button" aria-label="Color siguiente"></button>
-        <span class="color-name" aria-live="polite">Rojo óxido</span>
+
+      <section class="details section-black" id="funciones" aria-labelledby="details-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="details-title">CADA DETALLE IMPORTA</h2>
+            <p>Descubrí su ingeniería interna</p>
+          </div>
+
+          <div class="details-grid">
+            <article class="detail-card detail-water">
+              <div class="detail-copy">
+                <h3>DEPÓSITO PARA EL AGUA:</h3>
+                <p>Ubicado en el compartimiento superior, tiene capacidad de hasta 240 ml y marcas de medición.</p>
+              </div>
+              <figure class="cut-corner-frame">
+                <img src="assets/deposito-agua-nuevo.png" alt="Depósito de agua de la cafetera Makita" />
+              </figure>
+            </article>
+
+            <article class="detail-card detail-coffee">
+              <figure class="cut-corner-frame">
+                <img src="assets/step-clean-agregar-v2.webp" alt="Bandeja para café de la cafetera Makita" />
+              </figure>
+              <div class="detail-copy">
+                <h3>BANDEJA PARA EL CAFÉ:</h3>
+                <p>Apto para la doble compatibilidad, permite utilizar tanto el café en cápsulas como el café molido tradicional.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
-      <div class="footer-social-filled" aria-label="Redes sociales">
-        <span class="social-icon social-instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="5" y="5" width="14" height="14" rx="4" />
-            <circle cx="12" cy="12" r="3.3" />
-            <circle cx="16.4" cy="7.6" r="1.1" />
-          </svg>
-        </span>
-        <span class="social-icon social-facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14.2 8.2H16V5.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5V12H6.2v3.5h2.9V24h3.6v-8.5h3l.5-3.5h-3.5V9.8c0-1 .3-1.6 1.5-1.6Z" />
-          </svg>
-        </span>
-        <span class="social-icon social-tiktok">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15.2 3c.4 3 2.1 4.8 4.8 5v3.4c-1.6.1-3-.4-4.7-1.4v6.4c0 8.1-8.9 10.6-12.5 4.8-2.3-3.7-.9-10.2 6.5-10.5v3.6c-.5.1-1.1.2-1.6.4-1.5.5-2.3 1.5-2.1 3.2.4 3.2 6.2 4.1 5.7-2.1V3h3.9Z" />
-          </svg>
-        </span>
-      </div>
-      <img src="assets/desktop-design-entrega.jpg" alt="Diseno completo de la cafetera a bateria Makita DCM501" />
-      </div>
+
+      <section class="marquee marquee-top" aria-label="Características en movimiento">
+        <div class="marquee-track">
+          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
+          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
+          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
+          <span>PRÁCTICA // PORTÁTIL // ANTIGOLPES //</span>
+        </div>
+      </section>
+
+      <section class="steps section-teal" aria-labelledby="steps-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="steps-title">CAFÉ LISTO EN 3 SIMPLES PASOS</h2>
+            <p>Las claves para activar el mecanismo y disfrutar de tu café</p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <img src="assets/step-clean-verter-v2.webp" alt="Agua entrando en el tanque" />
+              <span class="step-number">1</span>
+              <div class="step-overlay">
+                <h3>LLENAR</h3>
+                <p>El tanque con agua</p>
+              </div>
+            </article>
+
+            <article class="step-card">
+              <img src="assets/step-clean-agregar-v2.webp" alt="Café molido dentro del filtro" />
+              <span class="step-number">2</span>
+              <div class="step-overlay">
+                <h3>AGREGAR</h3>
+                <p>El café molido o cápsula</p>
+              </div>
+            </article>
+
+            <article class="step-card">
+              <img src="assets/step-clean-disfrutar-v2.webp" alt="Café saliendo de la cafetera" />
+              <span class="step-number">3</span>
+              <div class="step-overlay">
+                <h3>DISFRUTAR</h3>
+                <p>Del café en cualquier lugar</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="action section-teal" aria-labelledby="action-title">
+        <div class="section-heading">
+          <h2 id="action-title">LISTA PARA LA ACCIÓN</h2>
+          <p>Te acompaña en cada lugar</p>
+        </div>
+
+        <div class="action-carousel" aria-label="Carrusel de uso">
+          <div class="action-slides">
+            <img class="action-slide is-active" src="assets/action-carousel-1.jpg" alt="Cafetera Makita sobre mesa de trabajo" />
+            <img class="action-slide" src="assets/action-carousel-2.jpg" alt="Cafetera Makita en uso al aire libre" />
+            <img class="action-slide" src="assets/action-carousel-3.jpg" alt="Cafetera Makita sobre camioneta de trabajo" />
+            <img class="action-slide" src="assets/action-carousel-4.jpg" alt="Cafetera Makita sobre banco de madera" />
+            <img class="action-slide" src="assets/action-carousel-5.jpg" alt="Cafetera Makita en contexto de montaña" />
+            <img class="action-slide" src="assets/action-carousel-6.jpg" alt="Cafetera Makita en contexto exterior" />
+          </div>
+          <button class="carousel-arrow carousel-prev" type="button" data-carousel="action" data-direction="-1" aria-label="Imagen anterior"></button>
+          <button class="carousel-arrow carousel-next" type="button" data-carousel="action" data-direction="1" aria-label="Imagen siguiente"></button>
+          <div class="carousel-dots action-dots" aria-label="Seleccionar imagen"></div>
+        </div>
+      </section>
+
+      <section class="style section-teal" id="complementos" aria-labelledby="style-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="style-title">ELEGÍ TU ESTILO DE TRABAJO</h2>
+          </div>
+
+          <div class="color-picker" aria-label="Selector de color">
+            <button class="color-arrow color-prev" type="button" data-direction="-1" aria-label="Color anterior"></button>
+            <div class="product-stage">
+              <img class="product-option product-blue" src="assets/product-blue-trim.webp" alt="Cafetera color celeste cielo" />
+              <img class="product-option product-red is-active" src="assets/product-red-trim.webp" alt="Cafetera color rojo óxido" />
+              <img class="product-option product-green" src="assets/product-green-trim.webp" alt="Cafetera color verde oscuro" />
+            </div>
+            <button class="color-arrow color-next" type="button" data-direction="1" aria-label="Color siguiente"></button>
+            <div class="color-dots" aria-label="Seleccionar color">
+              <button class="color-dot color-dot-blue" type="button" data-color="blue" aria-label="Celeste cielo"></button>
+              <button class="color-dot color-dot-red is-active" type="button" data-color="red" aria-label="Rojo óxido"></button>
+              <button class="color-dot color-dot-green" type="button" data-color="green" aria-label="Verde oscuro"></button>
+            </div>
+            <p class="color-label" aria-live="polite">Rojo óxido</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee marquee-bottom" aria-label="Atributos en movimiento">
+        <div class="marquee-track">
+          <span>PROFESIONAL // RESISTENTE // EFICIENTE //</span>
+          <span>PROFESIONAL // RESISTENTE // EFICIENTE //</span>
+          <span>PROFESIONAL // RESISTENTE // EFICIENTE //</span>
+        </div>
+      </section>
+
+      <section class="reviews section-black" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="reviews-title">EXPERIENCIAS REALES</h2>
+          </div>
+
+          <div class="reviews-carousel" aria-label="Carrusel de reseñas">
+            <div class="review-slides">
+              <img class="review-slide is-active" src="assets/review-slide-4.png" alt="Reseña de Carlos M." />
+              <img class="review-slide" src="assets/review-slide-1.png" alt="Reseña de Sofía G." />
+              <img class="review-slide" src="assets/review-slide-2.png" alt="Reseña de Pablo T." />
+              <img class="review-slide" src="assets/review-slide-3.png" alt="Reseña de Mariano L." />
+            </div>
+            <button class="carousel-arrow review-prev" type="button" data-carousel="reviews" data-direction="-1" aria-label="Reseña anterior"></button>
+            <button class="carousel-arrow review-next" type="button" data-carousel="reviews" data-direction="1" aria-label="Reseña siguiente"></button>
+            <div class="carousel-dots review-dots" aria-label="Seleccionar reseña"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <main class="mobile-page" aria-label="Pagina Makita DCM501 version celular">
-      <img src="assets/mobile-design-entrega.webp" alt="Diseno mobile de la cafetera a bateria Makita DCM501" />
-    </main>
-    <script src="script.js?v=4"></script>
+    <footer class="site-footer" id="contacto">
+      <div class="container footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/makita-logo-white.png" alt="Makita" />
+          <p>1990-2023 Makita Herramientas Eléctricas de Argentina S.A. Buenos Aires, Argentina.</p>
+        </div>
+
+        <nav aria-label="Productos">
+          <h2>PRODUCTOS</h2>
+          <a href="#">Accesorios</a>
+          <a href="#">Perforación</a>
+          <a href="#">Fijación</a>
+          <a href="#">Jardín</a>
+        </nav>
+
+        <nav aria-label="Contacto">
+          <h2>CONTACTO</h2>
+          <a href="#">Servicio técnico</a>
+          <a href="#">Soporte</a>
+          <a href="#">Garantía</a>
+        </nav>
+      </div>
+      <p class="credits">Diseño Gráfico 2 - Cátedra Belluccia 2026<br />Diseñado por: Nahiara Mosqueira</p>
+      <a class="to-top" href="#inicio" aria-label="Volver arriba"></a>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
