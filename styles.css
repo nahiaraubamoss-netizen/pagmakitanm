@@ -28,9 +28,15 @@ html {
 body {
   margin: 0;
   color: var(--white);
-  background: var(--black);
+  background:
+    url("assets/fondo-pagweb.webp") top center / 100% auto no-repeat,
+    var(--black);
   font-family: var(--body);
   overflow-x: hidden;
+}
+
+main {
+  min-height: calc(100vw * 10398 / 1920);
 }
 
 img {
@@ -53,20 +59,15 @@ button {
 }
 
 .section-black {
-  background: var(--black);
+  background: transparent;
 }
 
 .section-dark {
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.2) 62%, rgba(0, 0, 0, 0.88)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.2), #111 64%, #000 100%),
-    url("assets/page-background.webp") center top / cover no-repeat;
+  background: transparent;
 }
 
 .section-teal {
-  background:
-    radial-gradient(circle at 50% 28%, rgba(18, 104, 123, 0.78), rgba(0, 0, 0, 0) 54%),
-    linear-gradient(180deg, #000 0%, #07333c 18%, #12687b 45%, #06262d 78%, #000 100%);
+  background: transparent;
 }
 
 .section-heading {
@@ -224,6 +225,7 @@ button {
   width: min(72vw, 28rem);
   margin: 0;
   filter: drop-shadow(0 2rem 2rem rgba(0, 0, 0, 0.52));
+  visibility: hidden;
 }
 
 .hero-chevron {
@@ -240,9 +242,7 @@ button {
 
 .feature-strip {
   padding: clamp(2.2rem, 5vw, 4.5rem) 0;
-  background:
-    linear-gradient(180deg, rgba(18, 104, 123, 0.92), rgba(8, 51, 59, 0.94)),
-    var(--cyan-dark);
+  background: transparent;
 }
 
 .feature-grid {
@@ -861,9 +861,7 @@ button {
 .site-footer {
   position: relative;
   padding: clamp(4rem, 8vw, 8rem) 0 2rem;
-  background:
-    radial-gradient(circle at 50% 35%, rgba(18, 104, 123, 0.82), rgba(0, 0, 0, 0) 62%),
-    linear-gradient(180deg, #000, #0c4652);
+  background: transparent;
 }
 
 .footer-grid {
