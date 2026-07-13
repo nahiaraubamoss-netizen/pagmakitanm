@@ -258,35 +258,10 @@ button {
   text-align: left;
 }
 
-.feature-icon {
-  position: relative;
+.feature-icon-img {
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
   width: clamp(3rem, 6vw, 4.5rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--cyan);
-}
-
-.feature-icon::before {
-  width: 45%;
-  height: 45%;
-  content: "";
-  background: var(--white);
-}
-
-.feature-icon-battery::before {
-  border-radius: 0.2rem;
-  box-shadow: 0 -0.35rem 0 -0.15rem var(--white);
-}
-
-.feature-icon-shield::before {
-  clip-path: polygon(50% 0, 88% 16%, 80% 68%, 50% 100%, 20% 68%, 12% 16%);
-}
-
-.feature-icon-filter::before {
-  clip-path: polygon(0 0, 100% 0, 62% 50%, 62% 100%, 38% 100%, 38% 50%);
+  height: auto;
 }
 
 .feature-pill h2 {
