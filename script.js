@@ -21,6 +21,17 @@ sizeArtboard();
 window.addEventListener("resize", sizeArtboard, { passive: true });
 window.addEventListener("scroll", pinHeader, { passive: true });
 
+const revealElements = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("is-visible");
+  });
+}, {
+  rootMargin: "0px 0px -18% 0px",
+  threshold: 0.08,
+});
+revealElements.forEach((element) => revealObserver.observe(element));
+
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
 menuButton?.addEventListener("click", () => {
