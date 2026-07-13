@@ -1,0 +1,8 @@
+{
+  "name": "makita-dcm501-landing",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p dist/server dist/client/assets && cp worker.js dist/server/index.js && cp index.html styles.css script.js dist/client/ && cp -R assets/. dist/client/assets/"
+  }
+}
