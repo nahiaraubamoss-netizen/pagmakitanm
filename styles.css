@@ -31,7 +31,7 @@
   .menu-toggle.is-open span:nth-child(2){opacity:0}
   .menu-toggle.is-open span:nth-child(3){transform:rotate(-45deg)}
   .hero{width:414px;height:790px;background:url("assets/recurso-hero-mobile.png") center top/cover no-repeat}
-  .hero-copy{left:48px;top:83px;width:318px;text-align:center}
+  .hero-copy{left:48px;top:68px;width:318px;text-align:center}
   .kicker{margin:0 0 10px;font:400 10px/1 var(--body)}
   .hero h1{margin:0 0 12px;font:600 42px/1.04 var(--display);white-space:normal;letter-spacing:.01em}
   .lead{font:300 12px/16px var(--body)}
