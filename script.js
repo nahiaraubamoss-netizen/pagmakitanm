@@ -45,6 +45,17 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 revealElements.forEach((element) => revealObserver.observe(element));
 
+const stepCards = document.querySelectorAll(".step-grid article");
+const stepObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("is-visible");
+  });
+}, {
+  rootMargin: "0px 0px -28% 0px",
+  threshold: 0.35,
+});
+stepCards.forEach((card) => stepObserver.observe(card));
+
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
 menuButton?.addEventListener("click", () => {
@@ -93,6 +104,26 @@ const setupSlider = (slider) => {
     dotsBox.append(dot);
   });
   slider.querySelectorAll(".arrow").forEach((arrow) => arrow.addEventListener("click", () => show(index + Number(arrow.dataset.dir))));
+  if (slider.classList.contains("action-slider")) {
+    const viewport = slider.querySelector(".viewport");
+    let startX = 0;
+    let dragging = false;
+    viewport?.addEventListener("pointerdown", (event) => {
+      if (!isMobileView()) return;
+      dragging = true;
+      startX = event.clientX;
+      viewport.setPointerCapture?.(event.pointerId);
+    });
+    viewport?.addEventListener("pointerup", (event) => {
+      if (!dragging) return;
+      dragging = false;
+      const movement = event.clientX - startX;
+      if (Math.abs(movement) > 45) show(index + (movement < 0 ? 1 : -1));
+    });
+    viewport?.addEventListener("pointercancel", () => {
+      dragging = false;
+    });
+  }
   show(0);
 };
 document.querySelectorAll(".slider").forEach(setupSlider);
