@@ -15,8 +15,8 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee>div{animation:none}.product,.pin,.reveal{transition:none}.reveal{opacity:1;transform:none}}
 @media (max-width:600px){
   body{min-width:320px}
-  #page-stage{height:calc(5200px * var(--scale))}
-  #artboard{width:414px;height:5200px;background:#000 url("assets/recurso-bg-mobile.png") center 760px/auto calc(100% - 760px) no-repeat}
+  #page-stage{height:calc(8910px * var(--scale))}
+  #artboard{width:414px;height:8910px;background:#000 url("assets/recurso-bg-mobile.png") center 760px/auto calc(100% - 760px) no-repeat}
   .site-header{width:414px;height:44px;padding:16px 20px 0;background:transparent}
   .site-header.is-scrolled{background:rgb(0 0 0/.62);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
   .brand{width:54px}
@@ -36,14 +36,14 @@
   .hero h1{margin:0 0 12px;font:600 42px/1.04 var(--display);white-space:normal;letter-spacing:.01em}
   .lead{font:300 12px/16px var(--body)}
   .scroll-cue{left:181px;top:726px;width:39px}.scroll-cue img{width:39px}
-  .features{top:910px;left:0;width:414px;display:flex;flex-direction:column;gap:78px;padding:0 0}
+  .features{top:1042.64px;left:0;width:414px;height:510px;display:flex;flex-direction:column;gap:78px;padding:0 0}
   .features article{position:relative}
   .features img{width:64px;height:64px;margin:0 auto 18px;opacity:1}
   .features h2{margin:0 0 8px;font:600 18px/1 var(--display)}
   .features p{font:300 10px/1 var(--body)}
   .section-title h2{font:600 26px/.95 var(--display)}
   .section-title p{margin-top:8px;font:300 9px/12px var(--body)}
-  .anatomy{top:1505px;width:414px;height:820px}
+  .anatomy{top:1805.28px;width:414px;height:820px}
   .anatomy-product{left:117px;top:98px;width:180px;height:249px}
   .anatomy-product>img{width:180px;height:249px}
   .pin{width:26px;height:26px;font:600 18px/26px var(--display)}
@@ -55,7 +55,7 @@
   .part.is-active{transform:none}
   .part.is-active p{max-height:42px;opacity:1}
   .part-deposito{left:62px;top:440px}.part-baterias{left:62px;top:616px}.part-manija{left:62px;top:352px}.part-taza{left:62px;top:528px}
-  .details{top:2395px;width:414px;height:770px}
+  .details{top:2877.92px;width:414px;height:770px}
   .details>.section-title{top:0}
   .detail h3{margin:0 0 7px;font:600 22px/1 var(--display)}
   .detail p{font:300 8px/11px var(--body)}
@@ -63,15 +63,15 @@
   .detail-water>img{left:28px;right:auto;top:0;width:176px;height:176px}
   .detail-water>div{left:0;top:198px;width:230px;text-align:center}
   .detail-coffee{left:92px;top:395px;width:230px;height:280px}
-  .detail-coffee>img{left:28px;top:0;width:176px;height:176px}
-  .detail-coffee>div{left:0;top:196px;width:230px;text-align:center}
+  .detail-coffee>img{left:28px;top:0;width:176px;height:auto}
+  .detail-coffee>div{left:0;top:176px;width:230px;text-align:center}
   .marquee{left:-40px;width:494px;height:40px;border-width:2px;clip-path:none}
   .marquee span{font:600 18px/1 var(--display)}
-  .marquee-one{top:3260px}
-  .steps{top:3385px;width:414px;height:1110px}
+  .marquee-one{top:3900.56px}
+  .steps{top:4193.20px;width:414px;height:1110px}
   .step-grid{top:110px;left:92px;width:230px;display:flex;flex-direction:column;gap:42px}
   .step-grid article:nth-child(1),.step-grid article:nth-child(2),.step-grid article:nth-child(3){width:230px;height:231px}
-  .step-grid article{clip-path:polygon(16% 0,100% 0,100% 84%,84% 100%,0 100%,0 16%);border:2px solid var(--deep)}
+  .step-grid article{overflow:visible;clip-path:none;border:0}
   .step-base{opacity:1}
   .step-hover{display:none}
   .step-live{position:absolute;inset:0;display:block;padding:166px 14px 0;background:linear-gradient(to top,rgb(0 0 0/0) 0%,rgb(0 0 0/0) 100%);color:#fff;transition:background .45s ease}
@@ -81,7 +81,7 @@
   .step-live b{position:absolute;right:17px;bottom:28px;width:32px;height:32px;border-radius:50%;background:var(--cyan);color:#fff;text-align:center;font:600 22px/32px var(--display);z-index:2}
   .step-grid article.is-visible .step-live{background:linear-gradient(to top,rgb(0 0 0/.82) 0%,rgb(0 0 0/.5) 36%,rgb(0 0 0/.02) 72%)}
   .step-grid article.is-visible .step-live h3,.step-grid article.is-visible .step-live p{opacity:1;transform:translateY(0)}
-  .action{top:4515px;width:414px;height:450px}
+  .action{top:5555.84px;width:414px;height:450px}
   .action-slider{top:85px;width:414px;height:260px}
   .action-slider .viewport{touch-action:pan-y;user-select:none;cursor:grab}
   .action-slider .viewport:active{cursor:grabbing}
@@ -93,7 +93,7 @@
   .action-slider>.prev{left:22px;top:78px}.action-slider>.next{right:22px;top:78px}
   .action-slider>.dots{top:210px}
   .dots{gap:7px}.dots button,.product-dots button{width:8px;height:8px;border-width:1px}
-  .style{top:5075px;width:414px;height:560px}
+  .style{top:6258.48px;width:414px;height:560px}
   .product-stage{top:75px;left:0;width:414px;height:285px}
   .product.is-left{left:32px;top:112px;width:90px;height:120px;opacity:0;transform:translate3d(0,0,-180px) scale(.75)}
   .product.is-right{right:32px;top:112px;width:90px;height:120px;opacity:0;transform:translate3d(0,0,-180px) scale(.75)}
@@ -103,16 +103,16 @@
   .product-arrow.prev{left:0}.product-arrow.next{right:0}
   .product-dots{top:13px;gap:8px}.product-dots button{width:10px;height:10px}
   .product-color-name{top:36px;width:180px;font:300 10px/1 var(--body)}
-  .marquee-two{top:5665px}
-  .reviews{top:5785px;width:414px;height:520px}
+  .marquee-two{top:7071.12px}
+  .reviews{top:7363.76px;width:414px;height:520px}
   .reviews-slider{top:86px;width:414px;height:240px}
   .reviews-slider .viewport{left:66px;top:0;width:282px;height:136px}
   .review-image{width:282px;height:136px;object-fit:contain}
   .reviews-slider>.prev{left:22px;top:53px}.reviews-slider>.next{right:22px;top:53px}
   .reviews-slider>.dots{top:168px}
-  .site-footer{top:6275px;width:414px;height:520px}
-  #page-stage{height:calc(6800px * var(--scale))}
-  #artboard{height:6800px}
+  .site-footer{top:8136.40px;width:414px;height:520px}
+  #page-stage{height:calc(8910px * var(--scale))}
+  #artboard{height:8910px}
   .footer-brand{left:66px;top:0}.footer-brand img{width:88px;height:auto;margin-bottom:16px}.footer-brand p{font:300 8px/11px var(--body)}
   .site-footer nav:nth-of-type(1){left:66px;top:112px}.site-footer nav:nth-of-type(2){left:66px;top:245px}
   .site-footer nav{gap:11px}.site-footer nav h2{margin:0 0 6px;font:600 14px/1 var(--display)}.site-footer nav a{font:300 9px/1 var(--body)}
