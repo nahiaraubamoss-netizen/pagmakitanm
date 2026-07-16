@@ -23,7 +23,19 @@ const pinHeader = () => {
   if (!header) return;
   const artboardY = window.scrollY / currentScale;
   header.style.transform = `translateY(${artboardY}px)`;
+  header.style.opacity = "1";
+  header.style.visibility = "visible";
   header.classList.toggle("is-scrolled", artboardY > 80);
+};
+
+const keepHeaderPinned = () => {
+  let frames = 0;
+  const tick = () => {
+    pinHeader();
+    frames += 1;
+    if (frames < 90) requestAnimationFrame(tick);
+  };
+  tick();
 };
 
 sizeArtboard();
@@ -64,10 +76,24 @@ menuButton?.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(Boolean(open)));
 });
 
-document.querySelectorAll(".site-nav a").forEach((link) => link.addEventListener("click", () => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener("click", (event) => {
+  const targetId = link.getAttribute("href");
+  if (targetId && targetId.length > 1) {
+    const target = document.querySelector(targetId);
+    if (target) {
+      event.preventDefault();
+      window.scrollTo({
+        top: target.offsetTop * currentScale,
+        behavior: "smooth",
+      });
+      history.replaceState(null, "", targetId);
+      keepHeaderPinned();
+    }
+  }
   navigation?.classList.remove("is-open");
   menuButton?.classList.remove("is-open");
   menuButton?.setAttribute("aria-expanded", "false");
+  keepHeaderPinned();
 }));
 
 const setFeature = (name) => {
@@ -100,10 +126,16 @@ const setupSlider = (slider) => {
     const dot = document.createElement("button");
     dot.type = "button";
     dot.setAttribute("aria-label", `Ir al slide ${i + 1}`);
-    dot.addEventListener("click", () => show(i));
+    dot.addEventListener("click", () => {
+      show(i);
+      keepHeaderPinned();
+    });
     dotsBox.append(dot);
   });
-  slider.querySelectorAll(".arrow").forEach((arrow) => arrow.addEventListener("click", () => show(index + Number(arrow.dataset.dir))));
+  slider.querySelectorAll(".arrow").forEach((arrow) => arrow.addEventListener("click", () => {
+    show(index + Number(arrow.dataset.dir));
+    keepHeaderPinned();
+  }));
   if (slider.classList.contains("action-slider")) {
     const viewport = slider.querySelector(".viewport");
     let startX = 0;
@@ -150,6 +182,12 @@ const showColor = (next) => {
   const colorName = document.querySelector(".product-color-name");
   if (colorName) colorName.textContent = colorNames[centerColor];
 };
-document.querySelectorAll(".product-arrow").forEach((arrow) => arrow.addEventListener("click", () => showColor(colorIndex + Number(arrow.dataset.dir))));
-document.querySelectorAll(".product-dots button").forEach((dot, i) => dot.addEventListener("click", () => showColor(i)));
+document.querySelectorAll(".product-arrow").forEach((arrow) => arrow.addEventListener("click", () => {
+  showColor(colorIndex + Number(arrow.dataset.dir));
+  keepHeaderPinned();
+}));
+document.querySelectorAll(".product-dots button").forEach((dot, i) => dot.addEventListener("click", () => {
+  showColor(i);
+  keepHeaderPinned();
+}));
 showColor(colorIndex);
