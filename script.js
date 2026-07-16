@@ -13,8 +13,9 @@ if (window.location.hash) {
 window.scrollTo(0, 0);
 
 const sizeArtboard = () => {
-  const designWidth = window.matchMedia("(max-width: 600px)").matches ? MOBILE_WIDTH : DESKTOP_WIDTH;
-  currentScale = window.innerWidth / designWidth;
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const designWidth = isMobile ? MOBILE_WIDTH : DESKTOP_WIDTH;
+  currentScale = isMobile ? window.innerWidth / designWidth : Math.min(window.innerWidth / designWidth, 1);
   root.style.setProperty("--scale", String(currentScale));
   pinHeader();
 };
